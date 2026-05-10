@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpalOps | Event Production & Labor Staffing — NY/NJ</title>
+  <meta name="description" content="From large-scale productions to tight-turnaround setups — OpalOps brings experienced, professional crews that show up ready to work across NYC and NJ.">
+  <link rel="icon" type="image/svg+xml" href="images/opalopslogo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --cream: #f5f0e8; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 22px 52px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { height: 112px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 36px; }
+    .nav-links a { font-size: 14px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .8px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-apply { font-size: 14px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-apply:hover { color: var(--gold); }
+    .nav-cta { font-size: 13px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+
+    .hero { padding: 96px 52px 88px; background: var(--cream); border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; }
+    .hero-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--gold); display: block; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 62px; line-height: 1.1; letter-spacing: -2px; color: var(--black); max-width: 760px; margin-bottom: 24px; }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p { font-size: 18px; color: rgba(10,10,10,0.6); max-width: 560px; line-height: 1.7; margin-bottom: 40px; font-weight: 400; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+    .hero-text { }
+    .hero-image { }
+    .hero-btns { display: flex; gap: 14px; align-items: center; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; background: var(--gold); color: var(--cream); font-size: 15px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-light); }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; color: rgba(10,10,10,0.6); font-size: 15px; font-weight: 500; text-decoration: none; border: 1.5px solid rgba(10,10,10,0.2); border-radius: 2px; transition: border-color .2s, color .2s; }
+    .btn-secondary:hover { border-color: rgba(10,10,10,0.4); color: var(--black); }
+
+    .section { padding: 80px 52px; border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .section-white { background: var(--white); }
+    .section-cream { background: var(--cream); }
+    .section-dark { background: var(--black); }
+    .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .section-tag::before { content: ''; width: 18px; height: 1.5px; background: var(--gold); display: block; }
+    .section h2 { font-family: 'DM Serif Display', serif; font-size: 44px; line-height: 1.08; letter-spacing: -1.2px; color: var(--black); margin-bottom: 20px; max-width: 640px; }
+    .section h2 em { font-style: italic; color: var(--gold); }
+    .section-dark h2 { color: var(--cream); }
+    .section-dark h2 em { color: var(--gold-light); }
+    p.lead { font-size: 17px; color: rgba(10,10,10,0.6); line-height: 1.75; max-width: 580px; margin-bottom: 32px; }
+    .section-dark p.lead { color: rgba(245,240,232,0.6); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .two-col-wide { display: grid; grid-template-columns: 3fr 2fr; gap: 72px; align-items: center; }
+
+    .pain-list { display: flex; flex-direction: column; gap: 20px; }
+    .pain-item { display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; background: var(--cream); border: 1px solid rgba(10,10,10,0.08); }
+    .pain-icon { font-size: 22px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+    .pain-title { font-size: 15px; font-weight: 600; color: var(--black); margin-bottom: 4px; }
+    .pain-desc { font-size: 14px; color: rgba(10,10,10,0.55); line-height: 1.6; }
+
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
+    .step { padding: 40px 32px; background: var(--cream); }
+    .step-num { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500; }
+    .step h3 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px; }
+    .step p { font-size: 14px; color: rgba(10,10,10,0.55); line-height: 1.65; }
+
+    .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); }
+    .who-card { padding: 32px 28px; background: var(--white); }
+    .who-card img { width: 100%; height: 160px; object-fit: cover; margin-bottom: 20px; display: block; filter: sepia(1) contrast(1.18) saturate(1.15) brightness(1.04); }
+    .who-card h3 { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--black); margin-bottom: 8px; }
+    .who-card p { font-size: 13px; color: rgba(10,10,10,0.55); line-height: 1.65; }
+
+    .testimony-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); margin-top: 48px; }
+    .testimony { padding: 32px 28px; background: rgba(255,255,255,0.04); }
+    .testimony p { font-size: 14px; color: rgba(245,240,232,0.7); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+    .testimony-name { font-size: 12px; font-weight: 600; color: rgba(245,240,232,0.4); letter-spacing: .8px; text-transform: uppercase; }
+    .quote-block { border-left: 3px solid var(--gold-light); padding: 4px 0 4px 24px; margin-top: 40px; }
+    .quote-block p { font-family: 'DM Serif Display', serif; font-size: 22px; font-style: italic; color: var(--cream); line-height: 1.4; }
+
+    .cta-strip { padding: 80px 52px; display: flex; align-items: center; justify-content: space-between; gap: 40px; background: var(--black); }
+    .cta-strip h2 { font-family: 'DM Serif Display', serif; font-size: 42px; color: var(--cream); line-height: 1.08; letter-spacing: -1px; margin-bottom: 10px; }
+    .cta-strip p { font-size: 15px; color: rgba(245,240,232,0.5); }
+    .cta-btns { display: flex; gap: 12px; flex-shrink: 0; }
+    .btn-gold { display: inline-flex; align-items: center; padding: 14px 30px; background: var(--gold-light); color: var(--black); font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-gold:hover { background: #dbb840; }
+    .btn-ghost { display: inline-flex; align-items: center; padding: 14px 28px; font-size: 13px; font-weight: 600; border: 1.5px solid rgba(245,240,232,0.25); color: rgba(245,240,232,0.7); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: rgba(245,240,232,0.5); color: var(--cream); }
+
+    .footer { padding: 28px 52px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .footer-l { font-size: 12px; color: rgba(10,10,10,0.35); }
+    .footer-r { display: flex; gap: 20px; }
+    .footer-r a { font-size: 12px; color: rgba(10,10,10,0.35); text-decoration: none; transition: color .2s; }
+    .footer-r a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .hero { padding: 56px 24px 48px; }
+      .hero h1 { font-size: 40px; }
+      .hero p { font-size: 16px; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-image { display: none; }
+      .hero-btns { flex-direction: column; align-items: flex-start; }
+      .section { padding: 56px 24px; }
+      .two-col, .two-col-wide { grid-template-columns: 1fr; gap: 40px; }
+      .section h2 { font-size: 32px; }
+      .steps { grid-template-columns: 1fr; }
+      .who-grid { grid-template-columns: 1fr; }
+      .testimony-grid { grid-template-columns: 1fr; }
+      .cta-strip { flex-direction: column; align-items: flex-start; padding: 48px 24px; }
+      .cta-strip h2 { font-size: 30px; }
+      .footer { flex-direction: column; gap: 16px; padding: 24px 20px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <img class="nav-logo" src="images/opalopslogo.svg" alt="OpalOps">
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
+      <a href="https://tally.so/r/b5OMl0" class="nav-cta">Request a Crew</a>
+    </div>
+  </nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">NYC · NJ Event Labor</div>
+      <h1>Crew-founded.<br><em>Client-focused.</em><br>Commitment-first.</h1>
+      <p>From large-scale productions to tight-turnaround setups — we bring experienced, professional crews that show up ready to work and stay until the job is done right.</p>
+      <div class="hero-btns">
+        <a href="https://tally.so/r/b5OMl0" class="btn-primary">Request a Crew &nbsp;→</a>
+        <a href="https://tally.so/r/81eeRk" class="btn-secondary">Apply for Work</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="images/hero-crew.jpg" alt="OpalOps professional crew building an event set" style="width:100%;height:520px;object-fit:cover;display:block;filter:sepia(1) contrast(1.18) saturate(1.15) brightness(1.04);">
+    </div>
+  </div>
+</section>
+
+  <section class="section section-white">
+    <div class="two-col">
+      <div>
+        <div class="section-tag">The problem</div>
+        <h2>Finding dependable crew<br>shouldn't be <em>this hard.</em></h2>
+        <p class="lead">You need people who know the work, show up on time, and don't need hand-holding. That's not always what you get — until now.</p>
+        <a href="https://tally.so/r/b5OMl0" class="btn-primary">Request a Crew &nbsp;→</a>
+      </div>
+      <div class="pain-list">
+        <div class="pain-item">
+          <i class="ti ti-clock-x pain-icon" aria-hidden="true"></i>
+          <div>
+            <div class="pain-title">No-shows and last-minute cancellations</div>
+            <div class="pain-desc">Unreliable labor leaves you scrambling hours before load-in. We hold our crew accountable.</div>
+          </div>
+        </div>
+        <div class="pain-item">
+          <i class="ti ti-mood-confuzed pain-icon" aria-hidden="true"></i>
+          <div>
+            <div class="pain-title">Crew that doesn't know the work</div>
+            <div class="pain-desc">You shouldn't have to explain what a trim height is. Our crew has done this before.</div>
+          </div>
+        </div>
+        <div class="pain-item">
+          <i class="ti ti-currency-dollar-off pain-icon" aria-hidden="true"></i>
+          <div>
+            <div class="pain-title">Paying for labor that doesn't deliver</div>
+            <div class="pain-desc">Price and value aren't the same thing. We make sure you get both.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="about">
+    <div class="two-col-wide">
+      <div>
+        <div class="section-tag">Who we are</div>
+        <h2>Built by crew,<br>for the <em>people who hire them.</em></h2>
+        <p class="lead">OpalOps was started by someone who's worked load-ins, set builds, and warehouse floors. We built this company because we knew what good labor looks like — and we knew most clients weren't getting it.</p>
+        <p class="lead" style="margin-bottom:0">We're not a gig app. We're a crew company. Every person we send has been vetted, worked with us before, and knows what the job demands before they walk in the door.</p>
+      </div>
+      <div>
+        <img src="images/about-tradeshow.jpg" alt="OpalOps crew at event" style="width:100%;height:340px;object-fit:cover;display:block;filter:sepia(1) contrast(1.18) saturate(1.15) brightness(1.04);">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="services">
+    <div class="section-tag">What we do</div>
+    <h2 style="margin-bottom:40px">Whatever your event needs,<br>we've got the <em>crew for it.</em></h2>
+    <div class="who-grid">
+      <div class="who-card">
+        <img src="images/service-event.png" alt="Event and production crews">
+        <h3>Event & Production Crews</h3>
+        <p>Stagehands, load-in/load-out teams, and production support for concerts, corporate events, trade shows, and more.</p>
+      </div>
+      <div class="who-card">
+        <img src="images/service-warehouse.jpg" alt="Warehouse and logistics">
+        <h3>Warehouse & Logistics</h3>
+        <p>Pick-and-pack, receiving, inventory, and fulfillment teams that keep your operation running without disruption.</p>
+      </div>
+      <div class="who-card">
+        <img src="images/service-labor.jpg" alt="General labor">
+        <h3>General Labor</h3>
+        <p>Move crews, cleanup teams, and on-demand general labor for any job that needs extra hands done right.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="how-it-works">
+    <div class="section-tag">How it works</div>
+    <h2>Request a crew in<br><em>3 easy steps.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01 — Submit a request</div>
+        <h3>Tell us what you need</h3>
+        <p>Fill out a quick crew request. We'll follow up to confirm the scope, schedule, and crew size. Most quotes turn around same day.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02 — Approve the estimate</div>
+        <h3>We build your crew</h3>
+        <p>Once we align on details, we hand-pick crew matched to your specific job. You'll know exactly who's coming before they arrive.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03 — Show up and execute</div>
+        <h3>We take it from there</h3>
+        <p>Your crew checks in, clocked and ready. We handle everything behind the scenes so you can focus on your event.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="section-tag" style="color:var(--gold-light)">
+      <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>
+      What clients say
+    </div>
+    <h2 style="color:var(--cream);margin-bottom:0;">Trusted by production teams<br>across <em>NYC and NJ.</em></h2>
+    <div class="testimony-grid">
+      <div class="testimony">
+        <p>"OpalOps showed up prepared, on time, and hit the ground running. Exactly what we needed for a fast-paced load-in."</p>
+        <div class="testimony-name">Production Manager, Corporate Event</div>
+      </div>
+      <div class="testimony">
+        <p>"I've worked with a lot of crew companies. These guys actually know the work. That makes a huge difference on show day."</p>
+        <div class="testimony-name">Event Producer, NYC</div>
+      </div>
+      <div class="testimony">
+        <p>"Reliable, professional, and easy to work with. We've used them twice and will keep coming back."</p>
+        <div class="testimony-name">Operations Director, Experiential Agency</div>
+      </div>
+    </div>
+    <div class="quote-block">
+      <p>Your vision. Our crew. Executed right.</p>
+    </div>
+  </section>
+
+  <div class="cta-strip" id="contact">
+    <div>
+      <h2>Ready to request a crew?</h2>
+      <p>Tell us what you need — we'll handle the rest.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="https://tally.so/r/b5OMl0" class="btn-gold">Request a Crew &nbsp;→</a>
+      <a href="https://tally.so/r/81eeRk" class="btn-ghost">Apply for Work</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-l">© 2026 RRM Services LLC · OpalOps · Woodside, NY · (844) 478-1693</div>
+    <div class="footer-r">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="https://tally.so/r/81eeRk">Apply for Work</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:info@opalops.us">info@opalops.us</a>
+    </div>
+  </footer>
+
+</body>
+</html>
