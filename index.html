@@ -71,11 +71,14 @@
     .step p { font-size: 14px; color: rgba(10,10,10,0.55); line-height: 1.65; }
 
     .who-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); }
-    .who-card { padding: 32px 28px; background: var(--white); }
-    .who-card img { width: 100%; height: 160px; object-fit: cover; margin-bottom: 20px; display: block; filter: sepia(1) contrast(1.18) saturate(1.15) brightness(1.04); }
-    .who-card h3 { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--black); margin-bottom: 8px; }
-    .who-card p { font-size: 13px; color: rgba(10,10,10,0.55); line-height: 1.65; }
-
+    .who-card { position: relative; overflow: hidden; height: 280px; background: var(--white); cursor: pointer; }
+    .who-card img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(1) contrast(1.18) saturate(1.15) brightness(1.04); transition: transform 0.5s ease; }
+    .who-card:hover img { transform: scale(1.05); }
+    .who-card-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.75); display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; opacity: 0; transition: opacity 0.3s ease; }
+    .who-card:hover .who-card-overlay { opacity: 1; }
+    .who-card-overlay h3 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--cream); margin-bottom: 8px; }
+    .who-card-overlay p { font-size: 13px; color: rgba(245,240,232,0.75); line-height: 1.65; }
+    
     .testimony-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); margin-top: 48px; }
     .testimony { padding: 32px 28px; background: rgba(255,255,255,0.04); }
     .testimony p { font-size: 14px; color: rgba(245,240,232,0.7); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
@@ -206,20 +209,25 @@
     <div class="who-grid">
       <div class="who-card">
         <img src="images/service-event.png" alt="Event and production crews">
-        <h3>Event & Production Crews</h3>
-        <p>Stagehands, load-in/load-out teams, and production support for concerts, corporate events, trade shows, and more.</p>
+        <div class="who-card-overlay">
+          <h3>Event & Production Crews</h3>
+          <p>Stagehands, load-in/load-out teams, and production support for concerts, corporate events, trade shows, and more.</p>
+        </div>
       </div>
       <div class="who-card">
         <img src="images/service-warehouse.jpg" alt="Warehouse and logistics">
-        <h3>Warehouse & Logistics</h3>
-        <p>Pick-and-pack, receiving, inventory, and fulfillment teams that keep your operation running without disruption.</p>
+        <div class="who-card-overlay">
+          <h3>Warehouse & Logistics</h3>
+          <p>Pick-and-pack, receiving, inventory, and fulfillment teams that keep your operation running without disruption.</p>
+        </div>
       </div>
       <div class="who-card">
         <img src="images/service-labor.jpg" alt="General labor">
-        <h3>General Labor</h3>
-        <p>Move crews, cleanup teams, and on-demand general labor for any job that needs extra hands done right.</p>
+        <div class="who-card-overlay">
+          <h3>General Labor</h3>
+          <p>Move crews, cleanup teams, and on-demand general labor for any job that needs extra hands done right.</p>
+        </div>
       </div>
-    </div>
   </section>
 
   <section class="section section-cream" id="how-it-works">
