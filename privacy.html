@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | OpalOps</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --cream: #f5f0e8; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { height: 112px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-apply:hover { color: var(--gold); }
+    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
+    .nav-drawer { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a { font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
+    .nav-drawer a:hover { color: var(--gold); }
+    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; cursor: pointer; }
+    .nav-drawer .drawer-apply { font-size: 14px; color: rgba(10,10,10,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
+    .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
+    .page-header { padding: 72px 52px 56px; border-bottom: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .page-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .page-tag::before { content: ''; display: block; width: 22px; height: 1.5px; background: var(--gold); }
+    .page-header h1 { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1.05; letter-spacing: -1.5px; color: var(--black); margin-bottom: 12px; }
+    .page-header p { font-size: 14px; color: rgba(10,10,10,0.45); }
+    .content { max-width: 780px; margin: 0 auto; padding: 64px 48px 96px; }
+    .content h2 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin: 48px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .content h2:first-child { margin-top: 0; }
+    .content p { font-size: 15px; color: rgba(10,10,10,0.68); line-height: 1.8; margin-bottom: 14px; }
+    .content ul { margin: 0 0 14px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .content ul li { font-size: 15px; color: rgba(10,10,10,0.68); line-height: 1.7; }
+    .content a { color: var(--gold); text-decoration: none; }
+    .content a:hover { text-decoration: underline; }
+    .footer { padding: 28px 52px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .footer-l { font-size: 12px; color: rgba(10,10,10,0.35); }
+    .footer-r { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-r a { font-size: 12px; color: rgba(10,10,10,0.35); text-decoration: none; transition: color .2s; }
+    .footer-r a:hover { color: var(--gold); }
+    @media (max-width: 768px) {
+      .nav { padding: 12px 20px; }
+      .nav-logo { height: 56px; }
+      .nav-links, .nav-apply, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-header { padding: 48px 24px 40px; }
+      .page-header h1 { font-size: 36px; }
+      .content { padding: 40px 24px 64px; }
+      .footer { flex-direction: column; gap: 16px; padding: 24px 20px; text-align: center; }
+      .footer-r { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="nav-drawer" id="navDrawer">
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
+    <a href="index.html#services" onclick="closeDrawer()">Services</a>
+    <a href="index.html#our-work" onclick="closeDrawer()">Our Work</a>
+    <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
+    <a href="contact.html" onclick="closeDrawer()">Contact</a>
+    <a href="embedded.html" onclick="closeDrawer()">Embedded Crew</a>
+    <a href="#" class="drawer-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" onclick="closeDrawer()">Request a Crew &nbsp;→</a>
+    <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html"><img class="nav-logo" src="images/opalopslogo.png" alt="OpalOps"></a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#our-work">Our Work</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="embedded.html">Embedded Crew</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
+      <a href="#" class="nav-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Request a Crew</a>
+    </div>
+    <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-tag">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>Effective Date: April 10, 2026</p>
+  </div>
+
+  <div class="content">
+    <p>OpalOps (a DBA of RRM Services LLC) ("we," "us," or "our") operates opalops.us and related services. This Privacy Policy explains how we collect, use, and protect your information.</p>
+    <h2>1. Information We Collect</h2>
+    <p>We collect information you provide directly, including:</p>
+    <ul>
+      <li>Name, email address, phone number, and company name</li>
+      <li>Project and event details submitted through our quote request form</li>
+      <li>Payment information processed securely through Stripe</li>
+    </ul>
+    <h2>2. How We Use Your Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+      <li>Prepare and deliver service quotes</li>
+      <li>Process payments and send invoices</li>
+      <li>Communicate about your project and staffing needs</li>
+      <li>Comply with legal obligations</li>
+    </ul>
+    <h2>3. Payment Processing</h2>
+    <p>All payments are processed by Stripe. OpalOps does not store credit card numbers or sensitive payment data on our servers. Stripe's privacy policy is available at <a href="https://stripe.com/privacy" target="_blank">stripe.com/privacy</a>.</p>
+    <h2>4. Data Sharing</h2>
+    <p>We do not sell your personal information. We may share data with:</p>
+    <ul>
+      <li>Service providers necessary to operate our business (Stripe, Airtable)</li>
+      <li>Legal authorities if required by law</li>
+    </ul>
+    <h2>5. Data Retention</h2>
+    <p>We retain your information for as long as necessary to provide services and comply with legal obligations.</p>
+    <h2>6. Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal data by contacting us at <a href="mailto:info@opalops.us">info@opalops.us</a>.</p>
+    <h2>7. Contact</h2>
+    <p>OpalOps / RRM Services LLC<br>5110 Broadway PMB 1010<br>Woodside, NY 11377<br><a href="mailto:info@opalops.us">info@opalops.us</a><br>844-478-1693</p>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-l">&copy; 2026 RRM Services LLC &middot; OpalOps &middot; Woodside, NY &middot; (844) 478-1693</div>
+    <div class="footer-r">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://tally.so/r/81eeRk">Apply for Work</a>
+      <a href="terms.html">Terms</a>
+      <a href="mailto:info@opalops.us">info@opalops.us</a>
+    </div>
+  </footer>
+
+  <script>
+    function openDrawer() { document.getElementById('navDrawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('navDrawer').addEventListener('click', function(e) { if (e.target === this) closeDrawer(); });
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="938dc8da-7181-4bd5-af96-3a0ef3567b4c"></script>
+</body>
+</html>
