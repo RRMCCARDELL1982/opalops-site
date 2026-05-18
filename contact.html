@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --cream:  #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
@@ -52,54 +53,18 @@
     /* FORM SIDE */
     .form-side { padding: 64px 52px; background: var(--white); border-right: 1px solid rgba(10,10,10,0.08); }
     .form-side h2 { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--black); margin-bottom: 32px; letter-spacing: -.5px; }
-
     .form-group { margin-bottom: 22px; }
     .form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: .8px; text-transform: uppercase; color: rgba(10,10,10,0.55); margin-bottom: 8px; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 13px 16px;
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      color: var(--black);
-      background: var(--cream);
-      border: 1.5px solid rgba(10,10,10,0.15);
-      border-radius: 2px;
-      outline: none;
-      transition: border-color .2s;
-      appearance: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 13px 16px; font-family: 'Outfit', sans-serif; font-size: 15px; color: var(--black); background: var(--cream); border: 1.5px solid rgba(10,10,10,0.15); border-radius: 2px; outline: none; transition: border-color .2s; appearance: none; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
     .form-group textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
     .form-group select { cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a07a10' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px; }
-
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    .submit-btn {
-      width: 100%;
-      padding: 16px 32px;
-      background: var(--gold);
-      color: var(--cream);
-      font-family: 'Outfit', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      border: none;
-      border-radius: 2px;
-      cursor: pointer;
-      letter-spacing: .3px;
-      transition: background .2s;
-      margin-top: 8px;
-    }
+    .submit-btn { width: 100%; padding: 16px 32px; background: var(--gold); color: var(--cream); font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; border: none; border-radius: 2px; cursor: pointer; letter-spacing: .3px; transition: background .2s; margin-top: 8px; }
     .submit-btn:hover { background: var(--gold-light); }
     .submit-btn:active { transform: scale(0.99); }
-
     .form-note { font-size: 12px; color: rgba(10,10,10,0.35); margin-top: 14px; line-height: 1.6; }
     .form-note a { color: var(--gold); text-decoration: none; }
-
-    /* SUCCESS STATE */
     .success-msg { display: none; padding: 20px 24px; background: #edf7ed; border: 1px solid rgba(0,120,0,0.15); border-radius: 2px; margin-top: 16px; }
     .success-msg p { font-size: 14px; color: #1a5c1a; line-height: 1.6; }
 
@@ -107,7 +72,6 @@
     .info-side { padding: 64px 52px; background: var(--cream); }
     .info-side h2 { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--black); margin-bottom: 12px; letter-spacing: -.5px; }
     .info-side p { font-size: 15px; color: rgba(10,10,10,0.6); line-height: 1.75; margin-bottom: 40px; }
-
     .info-items { display: flex; flex-direction: column; gap: 28px; }
     .info-item { display: flex; align-items: flex-start; gap: 16px; }
     .info-icon { width: 40px; height: 40px; background: var(--white); border: 1px solid rgba(10,10,10,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); font-size: 18px; }
@@ -115,10 +79,9 @@
     .info-value { font-size: 15px; color: var(--black); font-weight: 500; }
     .info-value a { color: var(--black); text-decoration: none; }
     .info-value a:hover { color: var(--gold); }
-
     .quick-links { margin-top: 48px; padding-top: 40px; border-top: 1px solid rgba(10,10,10,0.08); }
     .quick-links h3 { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--black); margin-bottom: 16px; }
-    .quick-link-btn { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--white); border: 1px solid rgba(10,10,10,0.1); margin-bottom: 10px; text-decoration: none; color: var(--black); font-size: 14px; font-weight: 500; transition: border-color .2s, background .2s; }
+    .quick-link-btn { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; background: var(--white); border: 1px solid rgba(10,10,10,0.1); margin-bottom: 10px; text-decoration: none; color: var(--black); font-size: 14px; font-weight: 500; transition: border-color .2s, background .2s; cursor: pointer; }
     .quick-link-btn:hover { border-color: var(--gold); background: var(--cream); }
     .quick-link-btn span { font-size: 18px; color: var(--gold); }
 
@@ -161,14 +124,14 @@
     <a href="index.html"><img class="nav-logo" src="images/opalopslogo.png" alt="OpalOps"></a>
     <div class="nav-links">
       <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html#our-work">Our Work</a>
       <a href="index.html#how-it-works">How It Works</a>
       <a href="contact.html">Contact</a>
       <a href="embedded.html">Embedded Crew</a>
     </div>
     <div class="nav-right">
       <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
-      <a href="https://tally.so/r/b5OMl0" class="nav-cta">Request a Crew</a>
+      <a href="#" class="nav-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Request a Crew</a>
     </div>
     <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -186,17 +149,7 @@
     <!-- FORM -->
     <div class="form-side">
       <h2>Send us a message</h2>
-
-      <!--
-        SETUP INSTRUCTIONS:
-        1. Go to https://formspree.io and create a free account
-        2. Create a new form and set the email to info@opalops.us
-        3. Copy your form ID (looks like: xpzgkwqr)
-        4. Replace YOUR_FORMSPREE_ID below with your actual ID
-        5. That's it — submissions go straight to info@opalops.us
-      -->
       <form id="contact-form" action="https://formspree.io/f/mzdokgev" method="POST">
-
         <div class="form-row">
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -207,7 +160,6 @@
             <input type="text" id="company" name="company" placeholder="Acme Events LLC">
           </div>
         </div>
-
         <div class="form-row">
           <div class="form-group">
             <label for="email">Email Address</label>
@@ -218,7 +170,6 @@
             <input type="tel" id="phone" name="phone" placeholder="(212) 555-0100">
           </div>
         </div>
-
         <div class="form-group">
           <label for="service">Service Needed</label>
           <select id="service" name="service">
@@ -230,29 +181,21 @@
             <option value="Not sure yet">Not sure yet</option>
           </select>
         </div>
-
         <div class="form-group">
           <label for="event-date">Event / Job Date</label>
           <input type="text" id="event-date" name="event_date" placeholder="e.g. June 15, 2026 or TBD">
         </div>
-
         <div class="form-group">
           <label for="message">Tell us about your project</label>
           <textarea id="message" name="message" placeholder="Describe your event, crew size needed, location, and anything else that would help us understand the scope..." required></textarea>
         </div>
-
-        <!-- Hidden field so you know where the email came from -->
         <input type="hidden" name="_subject" value="New OpalOps Contact Form Submission">
         <input type="hidden" name="_next" value="https://opalops.us/contact.html?sent=true">
-
         <button type="submit" class="submit-btn">Send Message &nbsp;→</button>
-
         <div class="success-msg" id="success-msg">
           <p>✓ &nbsp;Message sent! We'll get back to you within a few hours. For urgent requests call us at (844) 478-1693.</p>
         </div>
-
         <p class="form-note">By submitting this form you agree to our <a href="privacy.html">Privacy Policy</a>. We never share your information. For immediate needs call <a href="tel:8444781693">(844) 478-1693</a>.</p>
-
       </form>
     </div>
 
@@ -260,7 +203,6 @@
     <div class="info-side">
       <h2>Other ways to reach us</h2>
       <p>We're a real team — not a call center. Reach out directly and you'll hear from us fast.</p>
-
       <div class="info-items">
         <div class="info-item">
           <div class="info-icon">✉</div>
@@ -291,10 +233,9 @@
           </div>
         </div>
       </div>
-
       <div class="quick-links">
         <h3>Ready to book?</h3>
-        <a href="https://tally.so/r/b5OMl0" class="quick-link-btn">
+        <a href="#" class="quick-link-btn" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">
           Request a Crew
           <span>→</span>
         </a>
@@ -312,7 +253,6 @@
     <div class="footer-r">
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
       <a href="https://tally.so/r/81eeRk">Apply for Work</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
@@ -320,18 +260,19 @@
   </footer>
 
   <script>
-    // Show success message after redirect back with ?sent=true
+    function openDrawer() { document.getElementById('navDrawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('navDrawer').addEventListener('click', function(e) { if (e.target === this) closeDrawer(); });
+
     const params = new URLSearchParams(window.location.search);
     if (params.get('sent') === 'true') {
       document.getElementById('success-msg').style.display = 'block';
       document.getElementById('contact-form').style.display = 'none';
     }
-
-    // Also handle Formspree AJAX submission for smoother UX
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', async function(e) {
       const action = form.getAttribute('action');
-      if (action.includes('mzdokgev')) return; // let native submit handle it
+      if (action.includes('mzdokgev')) return;
       e.preventDefault();
       const data = new FormData(form);
       const res = await fetch(action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });

@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <script async src="https://tally.so/widgets/embed.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --cream: #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
@@ -19,13 +20,7 @@
     body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
 
     /* ── NAV ── */
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 40px;
-      border-bottom: 1px solid rgba(10,10,10,0.1);
-      background: var(--cream);
-      position: sticky; top: 0; z-index: 100;
-    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
     .nav-logo { height:112px; width: auto; display: block; }
     .nav-links { display: flex; gap: 32px; }
     .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
@@ -33,28 +28,26 @@
     .nav-right { display: flex; gap: 12px; align-items: center; }
     .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
     .nav-apply:hover { color: var(--gold); }
-    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; }
+    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
     .nav-cta:hover { background: var(--gold); color: var(--cream); }
-
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
-
     .nav-drawer { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
     .nav-drawer.open { display: flex; }
     .nav-drawer a { font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
     .nav-drawer a:hover { color: var(--gold); }
-    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; }
+    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; cursor: pointer; }
     .nav-drawer .drawer-apply { font-size: 14px; color: rgba(10,10,10,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
     .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
 
     /* ── BUTTONS ── */
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; background: var(--gold); color: var(--cream); font-size: 15px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; background: var(--gold); color: var(--cream); font-size: 15px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
     .btn-primary:hover { background: var(--gold-light); }
     .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 15px 32px; color: rgba(10,10,10,0.6); font-size: 15px; font-weight: 500; text-decoration: none; border: 1.5px solid rgba(10,10,10,0.2); border-radius: 2px; transition: border-color .2s, color .2s; }
     .btn-secondary:hover { border-color: rgba(10,10,10,0.4); color: var(--black); }
-    .btn-gold { display: inline-flex; align-items: center; padding: 14px 30px; background: var(--gold-light); color: var(--black); font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; }
+    .btn-gold { display: inline-flex; align-items: center; padding: 14px 30px; background: var(--gold-light); color: var(--black); font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
     .btn-gold:hover { background: #dbb840; }
-    .btn-ghost { display: inline-flex; align-items: center; padding: 14px 28px; font-size: 13px; font-weight: 600; border: 1.5px solid rgba(245,240,232,0.25); color: rgba(245,240,232,0.7); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: border-color .2s, color .2s; }
+    .btn-ghost { display: inline-flex; align-items: center; padding: 14px 28px; font-size: 13px; font-weight: 600; border: 1.5px solid rgba(245,240,232,0.25); color: rgba(245,240,232,0.7); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: border-color .2s, color .2s; cursor: pointer; }
     .btn-ghost:hover { border-color: rgba(245,240,232,0.5); color: var(--cream); }
 
     /* ── HERO ── */
@@ -87,7 +80,6 @@
     .section-dark h2 em { color: var(--gold-light); }
     p.lead { font-size: 19px; color: rgba(10,10,10,0.6); line-height: 1.85; max-width: 580px; margin-bottom: 32px; }
     .section-dark p.lead { color: rgba(245,240,232,0.6); }
-
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
     .two-col-center { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
@@ -162,37 +154,28 @@
       .nav-logo { height: 40px; }
       .nav-links, .nav-apply, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
-
       .hero { padding: 48px 20px 52px; }
       .hero h1 { font-size: 36px; letter-spacing: -1px; }
       .hero p { font-size: 16px; margin-bottom: 32px; }
       .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
       .btn-primary, .btn-secondary { justify-content: center; padding: 16px 24px; font-size: 15px; }
-
       .section { padding: 48px 20px; }
       .two-col, .two-col-center { grid-template-columns: 1fr; gap: 36px; }
       .section h2 { font-size: 30px; letter-spacing: -.5px; }
       p.lead { font-size: 17px; }
-
       .steps { grid-template-columns: 1fr; margin-top: 32px; }
       .step { padding: 28px 20px; }
-
       .tiers { grid-template-columns: 1fr; }
       .tier { padding: 32px 24px; }
-
       .include-grid { grid-template-columns: 1fr; }
       .include-item { padding: 24px 20px; }
-
       .who-item { padding: 24px 20px; gap: 14px; }
-
       .gear-grid { grid-template-columns: 1fr; }
       .gear-item { padding: 28px 20px; }
-
       .cta-strip { flex-direction: column; align-items: stretch; padding: 48px 20px; gap: 28px; }
       .cta-strip h2 { font-size: 28px; }
       .cta-btns { flex-direction: column; gap: 10px; }
       .btn-gold, .btn-ghost { justify-content: center; padding: 16px 24px; font-size: 15px; }
-
       .footer { padding: 32px 20px; gap: 16px; }
       .footer-r { gap: 14px; }
     }
@@ -204,11 +187,11 @@
   <div class="nav-drawer" id="navDrawer">
     <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
     <a href="index.html#services" onclick="closeDrawer()">Services</a>
-    <a href="index.html#about" onclick="closeDrawer()">About</a>
+    <a href="index.html#our-work" onclick="closeDrawer()">Our Work</a>
     <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
     <a href="contact.html" onclick="closeDrawer()">Contact</a>
     <a href="embedded.html" onclick="closeDrawer()" style="color:var(--gold);">Embedded Crew ✦</a>
-    <a href="https://tally.so/r/b5OMl0" class="drawer-cta">Request a Crew &nbsp;→</a>
+    <a href="#" class="drawer-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" onclick="closeDrawer()">Request a Crew &nbsp;→</a>
     <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
   </div>
 
@@ -216,14 +199,14 @@
     <a href="index.html"><img class="nav-logo" src="images/opalopslogo.png" alt="OpalOps"></a>
     <div class="nav-links">
       <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
+      <a href="index.html#our-work">Our Work</a>
       <a href="index.html#how-it-works">How It Works</a>
       <a href="contact.html">Contact</a>
       <a href="embedded.html" style="color:var(--gold);border-bottom:2px solid var(--gold);padding-bottom:2px;">Embedded Crew</a>
     </div>
     <div class="nav-right">
       <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
-      <a href="https://tally.so/r/b5OMl0" class="nav-cta">Request a Crew</a>
+      <a href="#" class="nav-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Request a Crew</a>
     </div>
     <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -297,31 +280,11 @@
     <h2>Invisible by design.<br><em>Five steps to seamless.</em></h2>
     <p class="lead">From first contact to post-job wrap, your end-client never knows we exist. That's the point.</p>
     <div class="steps">
-      <div class="step">
-        <div class="step-num">01 — Scope</div>
-        <h3>Tell us about your program</h3>
-        <p>You reach out with crew size, event type, and brand standards. We align on the details before anything is confirmed.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">02 — Brief</div>
-        <h3>We prep your crew</h3>
-        <p>Before every job, crew receive a client-specific brief — your talking points, site protocols, and brand standards. They arrive knowing the role.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">03 — Deploy</div>
-        <h3>Crew shows up as your team</h3>
-        <p>No OpalOps branding on the floor. Crew introduce themselves as part of your operation. Your end-client sees a unified, professional team.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">04 — Execute</div>
-        <h3>We manage everything behind the scenes</h3>
-        <p>Timekeeping, compliance, payroll, and workers' comp — all handled on our end. You stay focused on your client.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">05 — Invoice</div>
-        <h3>One clean invoice to you</h3>
-        <p>All paperwork and billing stays strictly between OpalOps and your company. Your end-client never sees a vendor name.</p>
-      </div>
+      <div class="step"><div class="step-num">01 — Scope</div><h3>Tell us about your program</h3><p>You reach out with crew size, event type, and brand standards. We align on the details before anything is confirmed.</p></div>
+      <div class="step"><div class="step-num">02 — Brief</div><h3>We prep your crew</h3><p>Before every job, crew receive a client-specific brief — your talking points, site protocols, and brand standards. They arrive knowing the role.</p></div>
+      <div class="step"><div class="step-num">03 — Deploy</div><h3>Crew shows up as your team</h3><p>No OpalOps branding on the floor. Crew introduce themselves as part of your operation. Your end-client sees a unified, professional team.</p></div>
+      <div class="step"><div class="step-num">04 — Execute</div><h3>We manage everything behind the scenes</h3><p>Timekeeping, compliance, payroll, and workers' comp — all handled on our end. You stay focused on your client.</p></div>
+      <div class="step"><div class="step-num">05 — Invoice</div><h3>One clean invoice to you</h3><p>All paperwork and billing stays strictly between OpalOps and your company. Your end-client never sees a vendor name.</p></div>
     </div>
   </section>
 
@@ -332,43 +295,19 @@
     <p class="lead">Start with standard staffing. Add white-label deployment. Layer in branded gear. Each tier is a complete service — upgrade when it fits your program.</p>
     <div class="tiers">
       <div class="tier">
-        <h3>Standard</h3>
-        <div class="tier-sub">Core Staffing</div>
-        <div class="tier-divider"></div>
-        <ul class="tier-features">
-          <li>W-2 employed crew</li>
-          <li>Event, warehouse & general labor</li>
-          <li>OpalOps-branded or neutral attire</li>
-          <li>Single point-of-contact ops</li>
-          <li>Payroll, WC & compliance covered</li>
-        </ul>
+        <h3>Standard</h3><div class="tier-sub">Core Staffing</div><div class="tier-divider"></div>
+        <ul class="tier-features"><li>W-2 employed crew</li><li>Event, warehouse & general labor</li><li>OpalOps-branded or neutral attire</li><li>Single point-of-contact ops</li><li>Payroll, WC & compliance covered</li></ul>
         <div class="tier-cta">Base rate staffing</div>
       </div>
       <div class="tier tier-featured">
         <div class="tier-badge">Most Popular</div>
-        <h3>Embedded</h3>
-        <div class="tier-sub">White-Label Deployment</div>
-        <div class="tier-divider"></div>
-        <ul class="tier-features">
-          <li>Everything in Standard</li>
-          <li>Zero OpalOps branding on the floor</li>
-          <li>Crew presented as your team</li>
-          <li>Pre-job client-specific brief</li>
-          <li>All invoicing stays between us</li>
-        </ul>
+        <h3>Embedded</h3><div class="tier-sub">White-Label Deployment</div><div class="tier-divider"></div>
+        <ul class="tier-features"><li>Everything in Standard</li><li>Zero OpalOps branding on the floor</li><li>Crew presented as your team</li><li>Pre-job client-specific brief</li><li>All invoicing stays between us</li></ul>
         <div class="tier-cta">+ Premium tier rate</div>
       </div>
       <div class="tier">
-        <h3>Embedded+</h3>
-        <div class="tier-sub">White-Label + Branded Gear</div>
-        <div class="tier-divider"></div>
-        <ul class="tier-features">
-          <li>Everything in Embedded</li>
-          <li>Client-logoed gear sourced & delivered</li>
-          <li>Size breakdown & logo coordination</li>
-          <li>Gear line-itemed on quote</li>
-          <li>Unified look from load-in to wrap</li>
-        </ul>
+        <h3>Embedded+</h3><div class="tier-sub">White-Label + Branded Gear</div><div class="tier-divider"></div>
+        <ul class="tier-features"><li>Everything in Embedded</li><li>Client-logoed gear sourced & delivered</li><li>Size breakdown & logo coordination</li><li>Gear line-itemed on quote</li><li>Unified look from load-in to wrap</li></ul>
         <div class="tier-cta">+ Gear markup</div>
       </div>
     </div>
@@ -379,48 +318,12 @@
     <div class="section-tag">What's included</div>
     <h2>Everything you need.<br><em>Nothing you have to manage.</em></h2>
     <div class="include-grid">
-      <div class="include-item">
-        <i class="ti ti-user-check include-icon"></i>
-        <div>
-          <div class="include-title">W-2 Employed Workforce</div>
-          <div class="include-desc">Every crew member is a W-2 employee of OpalOps — not a 1099 contractor. That means full employer accountability, workers' comp coverage, and a team that acts like it.</div>
-        </div>
-      </div>
-      <div class="include-item">
-        <i class="ti ti-file-invoice include-icon"></i>
-        <div>
-          <div class="include-title">Single Invoice, Total Discretion</div>
-          <div class="include-desc">One clean invoice to your company. No OpalOps paperwork reaches your end-client. Billing structure stays entirely between us.</div>
-        </div>
-      </div>
-      <div class="include-item">
-        <i class="ti ti-clipboard-text include-icon"></i>
-        <div>
-          <div class="include-title">Pre-Job Client Brief</div>
-          <div class="include-desc">Before every deployment, your crew receives a written brief with your client's brand standards, talking points, site layout, and any protocols specific to the job.</div>
-        </div>
-      </div>
-      <div class="include-item">
-        <i class="ti ti-shield-check include-icon"></i>
-        <div>
-          <div class="include-title">Full Compliance Coverage</div>
-          <div class="include-desc">Payroll taxes, NYSIF workers' comp, and liability insurance are all managed on our end. You get the labor — we carry the employer risk.</div>
-        </div>
-      </div>
-      <div class="include-item">
-        <i class="ti ti-tshirt include-icon"></i>
-        <div>
-          <div class="include-title">Branded Gear (Embedded+ only)</div>
-          <div class="include-desc">We source, brand, and deliver client-logoed polos, vests, hi-vis gear, caps, and lanyards. Logo file + size breakdown required 5 business days before the job.</div>
-        </div>
-      </div>
-      <div class="include-item">
-        <i class="ti ti-phone include-icon"></i>
-        <div>
-          <div class="include-title">Dedicated Point of Contact</div>
-          <div class="include-desc">One person handles your program from quote to closeout. No call centers, no ticketing system — direct access to the person running your crew.</div>
-        </div>
-      </div>
+      <div class="include-item"><i class="ti ti-user-check include-icon"></i><div><div class="include-title">W-2 Employed Workforce</div><div class="include-desc">Every crew member is a W-2 employee of OpalOps — not a 1099 contractor. That means full employer accountability, workers' comp coverage, and a team that acts like it.</div></div></div>
+      <div class="include-item"><i class="ti ti-file-invoice include-icon"></i><div><div class="include-title">Single Invoice, Total Discretion</div><div class="include-desc">One clean invoice to your company. No OpalOps paperwork reaches your end-client. Billing structure stays entirely between us.</div></div></div>
+      <div class="include-item"><i class="ti ti-clipboard-text include-icon"></i><div><div class="include-title">Pre-Job Client Brief</div><div class="include-desc">Before every deployment, your crew receives a written brief with your client's brand standards, talking points, site layout, and any protocols specific to the job.</div></div></div>
+      <div class="include-item"><i class="ti ti-shield-check include-icon"></i><div><div class="include-title">Full Compliance Coverage</div><div class="include-desc">Payroll taxes, NYSIF workers' comp, and liability insurance are all managed on our end. You get the labor — we carry the employer risk.</div></div></div>
+      <div class="include-item"><i class="ti ti-tshirt include-icon"></i><div><div class="include-title">Branded Gear (Embedded+ only)</div><div class="include-desc">We source, brand, and deliver client-logoed polos, vests, hi-vis gear, caps, and lanyards. Logo file + size breakdown required 5 business days before the job.</div></div></div>
+      <div class="include-item"><i class="ti ti-phone include-icon"></i><div><div class="include-title">Dedicated Point of Contact</div><div class="include-desc">One person handles your program from quote to closeout. No call centers, no ticketing system — direct access to the person running your crew.</div></div></div>
     </div>
   </section>
 
@@ -429,34 +332,10 @@
     <div class="section-tag-light">Who it's for</div>
     <h2>Designed for clients who<br>can't let the <em>seams show.</em></h2>
     <div class="who-list">
-      <div class="who-item">
-        <div class="who-num">01 —</div>
-        <div>
-          <div class="who-title">Exhibit Houses</div>
-          <div class="who-desc">You've built relationships with brands and exhibitors at Javits and beyond. The last thing you want is your crew vendor visible on the floor. We keep it clean.</div>
-        </div>
-      </div>
-      <div class="who-item">
-        <div class="who-num">02 —</div>
-        <div>
-          <div class="who-title">Experiential & Brand Agencies</div>
-          <div class="who-desc">Activations demand a seamless, on-brand crew presence from setup to strike. Your end-client should see one unified team — not a patchwork of vendors.</div>
-        </div>
-      </div>
-      <div class="who-item">
-        <div class="who-num">03 —</div>
-        <div>
-          <div class="who-title">AV & Technical Production Companies</div>
-          <div class="who-desc">Supplement your in-house team with W-2 stagehands who follow your protocols, know production environments, and represent your company professionally.</div>
-        </div>
-      </div>
-      <div class="who-item">
-        <div class="who-num">04 —</div>
-        <div>
-          <div class="who-title">Trade Show & Event Service Companies</div>
-          <div class="who-desc">When you're managing multiple clients across a show floor, you need crew that adapts to each brand standard — and never breaks the illusion.</div>
-        </div>
-      </div>
+      <div class="who-item"><div class="who-num">01 —</div><div><div class="who-title">Exhibit Houses</div><div class="who-desc">You've built relationships with brands and exhibitors at Javits and beyond. The last thing you want is your crew vendor visible on the floor. We keep it clean.</div></div></div>
+      <div class="who-item"><div class="who-num">02 —</div><div><div class="who-title">Experiential & Brand Agencies</div><div class="who-desc">Activations demand a seamless, on-brand crew presence from setup to strike. Your end-client should see one unified team — not a patchwork of vendors.</div></div></div>
+      <div class="who-item"><div class="who-num">03 —</div><div><div class="who-title">AV & Technical Production Companies</div><div class="who-desc">Supplement your in-house team with W-2 stagehands who follow your protocols, know production environments, and represent your company professionally.</div></div></div>
+      <div class="who-item"><div class="who-num">04 —</div><div><div class="who-title">Trade Show & Event Service Companies</div><div class="who-desc">When you're managing multiple clients across a show floor, you need crew that adapts to each brand standard — and never breaks the illusion.</div></div></div>
     </div>
   </section>
 
@@ -466,24 +345,9 @@
     <h2>Your logo on every<br><em>crew member.</em></h2>
     <p class="lead">We source, brand, and coordinate client-logoed gear for your crew. Crews arrive dressed as your team — no coordination required on your end.</p>
     <div class="gear-grid">
-      <div class="gear-item">
-        <div class="gear-icon"><i class="ti ti-shirt"></i></div>
-        <div class="gear-name">Polos & Tees</div>
-        <div class="gear-cost">Source cost: $18–28 per piece</div>
-        <div class="gear-bill">Billed: $45–65 per piece</div>
-      </div>
-      <div class="gear-item">
-        <div class="gear-icon"><i class="ti ti-vest"></i></div>
-        <div class="gear-name">Vests & Hi-Vis</div>
-        <div class="gear-cost">Source cost: $22–35 per piece</div>
-        <div class="gear-bill">Billed: $55–75 per piece</div>
-      </div>
-      <div class="gear-item">
-        <div class="gear-icon"><i class="ti ti-tag"></i></div>
-        <div class="gear-name">Caps & Lanyards</div>
-        <div class="gear-cost">Source cost: $8–15 per piece</div>
-        <div class="gear-bill">Billed: $22–35 per piece</div>
-      </div>
+      <div class="gear-item"><div class="gear-icon"><i class="ti ti-shirt"></i></div><div class="gear-name">Polos & Tees</div><div class="gear-cost">Source cost: $18–28 per piece</div><div class="gear-bill">Billed: $45–65 per piece</div></div>
+      <div class="gear-item"><div class="gear-icon"><i class="ti ti-vest"></i></div><div class="gear-name">Vests & Hi-Vis</div><div class="gear-cost">Source cost: $22–35 per piece</div><div class="gear-bill">Billed: $55–75 per piece</div></div>
+      <div class="gear-item"><div class="gear-icon"><i class="ti ti-tag"></i></div><div class="gear-name">Caps & Lanyards</div><div class="gear-cost">Source cost: $8–15 per piece</div><div class="gear-bill">Billed: $22–35 per piece</div></div>
     </div>
     <p style="font-size:13px;color:rgba(10,10,10,0.4);margin-top:20px;line-height:1.6;">Logo file required 5 business days before the job. Non-refundable once ordered. Gear line-itemed on your quote by quantity and unit rate.</p>
   </section>
@@ -496,7 +360,7 @@
     </div>
     <div class="cta-btns">
       <a href="mailto:accounts@opalops.us?subject=Embedded Crew Program Inquiry" class="btn-gold">Email Us &nbsp;→</a>
-      <a href="https://tally.so/r/b5OMl0" class="btn-ghost">Request a Crew</a>
+      <a href="#" class="btn-ghost" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Request a Crew</a>
     </div>
   </div>
 
@@ -512,7 +376,6 @@
     <div class="footer-r">
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
-      <a href="index.html#about">About</a>
       <a href="https://tally.so/r/81eeRk">Apply for Work</a>
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
@@ -522,20 +385,10 @@
   </footer>
 
   <script>
-    function openDrawer() {
-      document.getElementById('navDrawer').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeDrawer() {
-      document.getElementById('navDrawer').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.getElementById('navDrawer').addEventListener('click', function(e) {
-      if (e.target === this) closeDrawer();
-    });
+    function openDrawer() { document.getElementById('navDrawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('navDrawer').addEventListener('click', function(e) { if (e.target === this) closeDrawer(); });
   </script>
-
   <script defer src="https://cloud.umami.is/script.js" data-website-id="938dc8da-7181-4bd5-af96-3a0ef3567b4c"></script>
-
 </body>
 </html>
