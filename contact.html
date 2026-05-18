@@ -14,32 +14,28 @@
   <script async src="https://tally.so/widgets/embed.js"></script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --cream: #f5f0e8; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
+    :root { --cream:  #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
 
-/* NAV */
-.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
-.nav-logo { height: 112px; width: auto; display: block; }
-.nav-links { display: flex; gap: 32px; }
-.nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
-.nav-links a:hover { color: var(--gold); }
-.nav-right { display: flex; gap: 12px; align-items: center; }
-.nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
-.nav-apply:hover { color: var(--gold); }
-.nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
-.nav-cta:hover { background: var(--gold); color: var(--cream); }
-
-    /* Hamburger */
+    /* NAV */
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { height: 112px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-apply:hover { color: var(--gold); }
+    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
-
-    /* Mobile drawer */
     .nav-drawer { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
     .nav-drawer.open { display: flex; }
     .nav-drawer a { font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
     .nav-drawer a:hover { color: var(--gold); }
-    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; cursor: pointer; }
+    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; }
     .nav-drawer .drawer-apply { font-size: 14px; color: rgba(10,10,10,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
     .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
 
@@ -97,10 +93,9 @@
     .footer-r a:hover { color: var(--gold); }
 
     @media (max-width: 768px) {
-      .nav { padding: 16px 20px; }
-      .nav-links { display: none; }
-      .nav-apply { display: none; }
-      .nav-cta { display: none; }
+      .nav { padding: 12px 20px; }
+      .nav-logo { height: 56px; }
+      .nav-links, .nav-apply, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
       .page-header { padding: 48px 24px 40px; }
       .page-header h1 { font-size: 36px; }
@@ -108,20 +103,20 @@
       .form-side, .info-side { padding: 40px 24px; }
       .form-row { grid-template-columns: 1fr; }
       .footer { flex-direction: column; gap: 16px; padding: 24px 20px; text-align: center; }
+      .footer-r { justify-content: center; flex-wrap: wrap; gap: 14px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Mobile nav drawer -->
-  <div class="nav-drawer" id="navDrawer">
+<div class="nav-drawer" id="navDrawer">
     <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
     <a href="index.html#services" onclick="closeDrawer()">Services</a>
-    <a href="index.html#our-work" onclick="closeDrawer()">Our Work</a>
+    <a href="index.html#about" onclick="closeDrawer()">About</a>
     <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
     <a href="contact.html" onclick="closeDrawer()">Contact</a>
     <a href="embedded.html" onclick="closeDrawer()">Embedded Crew</a>
-    <a href="#" class="drawer-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" onclick="closeDrawer()">Request &nbsp;→</a>
+    <a href="https://tally.so/r/b5OMl0" class="drawer-cta">Request a Crew &nbsp;→</a>
     <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
   </div>
 
@@ -286,6 +281,10 @@
         document.getElementById('success-msg').style.display = 'block';
       }
     });
+
+    function openDrawer() { document.getElementById('navDrawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('navDrawer').addEventListener('click', function(e) { if (e.target === this) closeDrawer(); });
   </script>
 
 </body>
