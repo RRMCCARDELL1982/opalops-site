@@ -16,7 +16,7 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --cream: #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
     body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
 
     /* ── NAV ── */
@@ -189,24 +189,27 @@
 
     /* ── MOBILE ── */
     @media (max-width: 768px) {
-      .nav { padding: 12px 20px; }
+      html { overflow-x: hidden; }
+      body { overflow-x: hidden; width: 100vw; }
+      
+      .nav { padding: 12px 20px; width: 100%; }
       .nav-logo { height: 56px; }
       .nav-links { display: none; }
       .nav-apply { display: none; }
       .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
 
-      .hero { min-height: auto; max-height: none; }
+      .hero { min-height: auto; max-height: none; overflow: hidden; width: 100%; }
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-text { padding: 40px 20px; clip-path: none !important; }
+      .hero-text { padding: 40px 20px; clip-path: none !important; width: 100%; }
       .hero h1 { font-size: 32px; letter-spacing: -1px; }
       .hero p { font-size: 15px; margin-bottom: 24px; }
       .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
       .btn-primary, .btn-secondary { justify-content: center; padding: 16px 24px; font-size: 15px; }
-      .hero-image { max-height: 240px; }
-      .hero-image video { clip-path: none !important; min-height: 240px !important; }
+      .hero-image { max-height: 240px; overflow: hidden; width: 100%; }
+      .hero-image video { clip-path: none !important; min-height: 240px !important; width: 100%; object-fit: cover; }
 
-      .section { padding: 48px 20px; }
+      .section { padding: 48px 20px; width: 100%; overflow: hidden; }
       .two-col { grid-template-columns: 1fr; gap: 36px; }
       .section h2 { font-size: 30px; letter-spacing: -.5px; }
       p.lead { font-size: 18px; }
@@ -229,19 +232,24 @@
       .quote-block { margin-top: 28px; }
       .quote-block p { font-size: 20px; }
 
-      #embedded-crew { padding: 0 20px; }
+      #embedded-crew { padding: 0 20px; width: 100%; overflow: hidden; }
       #embedded-crew > div { grid-template-columns: 1fr; }
       #embedded-crew .label-col { display: none; }
       #embedded-crew .content-col { padding: 48px 0; }
       #embedded-crew h2 { font-size: 30px; letter-spacing: -.5px; }
 
-      .cta-strip { flex-direction: column; align-items: stretch; padding: 48px 20px; gap: 28px; }
+      .cta-strip { flex-direction: column; align-items: stretch; padding: 48px 20px; gap: 28px; width: 100%; overflow: hidden; }
       .cta-strip h2 { font-size: 28px; }
       .cta-btns { flex-direction: column; gap: 10px; }
       .btn-gold, .btn-ghost { justify-content: center; padding: 16px 24px; font-size: 15px; }
 
-      .footer { padding: 32px 20px; gap: 16px; }
+      .footer { padding: 32px 20px; gap: 16px; width: 100%; overflow: hidden; }
       .footer-r { gap: 14px; }
+
+      /* Getting started grid - convert 3 cols to 1 col on mobile */
+      .getting-started-grid {
+        grid-template-columns: 1fr !important;
+      }
     }
   </style>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="09191b0b-b076-4f74-b0d5-21f43ace8389"></script>
@@ -394,7 +402,7 @@
       <p class="lead" style="margin-bottom: 32px; text-align: left;">Request crew, get quoted same day, crew shows up and handles it. Here's what's consistent:</p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
+    <div class="getting-started-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-size: 32px; color: var(--gold); margin-bottom: 16px;">✓</div>
         <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Same-Day Quote</h3>
