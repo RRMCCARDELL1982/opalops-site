@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compliance & Risk Protection | OpalOps W-2 Crews</title>
+  <meta name="description" content="W-2 compliant event crews with full workers' compensation and fidelity bonding. Eliminate contractor liability. Full coverage, zero risk.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --cream: #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
+    body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+
+    /* ── NAV ── */
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 40px;
+      border-bottom: 1px solid rgba(10,10,10,0.1);
+      background: var(--cream);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo { height: 112px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-apply:hover { color: var(--gold); }
+    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
+
+    .nav-drawer { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a { font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
+    .nav-drawer a:hover { color: var(--gold); }
+    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; cursor: pointer; }
+    .nav-drawer .drawer-apply { font-size: 14px; color: rgba(10,10,10,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
+    .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
+
+    /* ── HERO ── */
+    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; max-height: 460px; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
+    .hero-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--gold-light); display: block; }
+    .hero h1 { font-family: 'DM Serif Display', serif; font-size: 46px; line-height: 1.1; letter-spacing: -1.5px; color: var(--cream); max-width: 760px; margin-bottom: 16px; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 520px; line-height: 1.75; margin-bottom: 28px; font-weight: 500; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .hero-text { padding: 40px 40px 40px 80px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
+    .hero-image { display: flex; overflow: hidden; max-height: 460px; }
+    .hero-btns { display: flex; gap: 14px; align-items: center; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: var(--gold-light); color: #0a0a0a; font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
+    .btn-primary:hover { background: #dbb840; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; color: var(--cream); font-size: 14px; font-weight: 500; text-decoration: none; border: 1.5px solid rgba(245,240,232,0.3); border-radius: 2px; transition: border-color .2s, color .2s; }
+    .btn-secondary:hover { border-color: rgba(245,240,232,0.6); color: var(--cream); }
+
+    /* ── SECTIONS ── */
+    .section { padding: 80px 52px; border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .section-white { background: var(--white); }
+    .section-cream { background: var(--cream); }
+    .section-dark { background: var(--black); }
+    .section-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .section-tag::before { content: ''; width: 18px; height: 1.5px; background: var(--gold); display: block; }
+    .section h2 { font-family: 'DM Serif Display', serif; font-size: 44px; line-height: 1.08; letter-spacing: -1.2px; color: var(--black); margin-bottom: 20px; max-width: 640px; }
+    .section h2 em { font-style: italic; color: var(--gold); }
+    .section-dark h2 { color: var(--cream); }
+    .section-dark h2 em { color: var(--gold-light); }
+    p.lead { font-size: 20px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.85; max-width: 580px; margin-bottom: 32px; }
+    .section-dark p.lead { color: rgba(245,240,232,0.6); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+
+    /* Risk/Safe Comparison */
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
+    .comparison-box { padding: 40px 32px; background: var(--white); }
+    .comparison-box h3 { font-family: 'DM Serif Display', serif; font-size: 24px; margin-bottom: 20px; }
+    .comparison-box.risk h3 { color: #c41e3a; }
+    .comparison-box.safe h3 { color: #2d5016; }
+    .comparison-box ul { list-style: none; padding: 0; }
+    .comparison-box li { font-size: 16px; color: rgba(10,10,10,0.6); margin-bottom: 14px; padding-left: 28px; position: relative; line-height: 1.6; }
+    .comparison-box.risk li::before { content: "✗"; position: absolute; left: 0; color: #c41e3a; font-weight: bold; font-size: 18px; }
+    .comparison-box.safe li::before { content: "✓"; position: absolute; left: 0; color: #2d5016; font-weight: bold; font-size: 18px; }
+
+    /* Proof Grid */
+    .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.06); margin-top: 48px; }
+    .proof-item { padding: 32px 28px; background: rgba(255,255,255,0.04); }
+    .proof-item h3 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--gold-light); margin-bottom: 12px; }
+    .proof-item p { font-size: 18px; font-weight: 500; color: rgba(245,240,232,0.8); line-height: 1.7; }
+
+    /* Icon list */
+    .icon-list { margin-top: 48px; }
+    .icon-item { display: flex; gap: 28px; margin-bottom: 40px; align-items: flex-start; }
+    .icon-item-num { font-family: 'DM Serif Display', serif; font-size: 32px; color: var(--gold); flex-shrink: 0; line-height: 1; }
+    .icon-item-text h3 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 8px; }
+    .icon-item-text p { font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7; }
+
+    /* Alert Box */
+    .alert-box { padding: 32px; background: var(--white); border-left: 4px solid #c41e3a; margin: 48px 0; }
+    .alert-box h3 { font-family: 'DM Serif Display', serif; font-size: 24px; color: #c41e3a; margin-bottom: 16px; }
+    .alert-box p { font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7; margin-bottom: 16px; }
+    .alert-box ul { list-style: none; padding-left: 28px; }
+    .alert-box li { font-size: 16px; color: rgba(10,10,10,0.6); margin-bottom: 10px; position: relative; }
+    .alert-box li::before { content: "•"; position: absolute; left: -18px; color: #c41e3a; font-weight: bold; }
+
+    /* CTA strip */
+    .cta-strip { padding: 80px 52px; display: flex; align-items: center; justify-content: space-between; gap: 40px; background: var(--black); }
+    .cta-strip h2 { font-family: 'DM Serif Display', serif; font-size: 42px; color: var(--cream); line-height: 1.08; letter-spacing: -1px; margin-bottom: 10px; }
+    .cta-strip p { font-size: 20px; font-weight: 500; color: rgba(245,240,232,0.5); }
+    .cta-btns { display: flex; gap: 12px; flex-shrink: 0; }
+    .btn-gold { display: inline-flex; align-items: center; padding: 14px 30px; background: var(--gold-light); color: var(--black); font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
+    .btn-gold:hover { background: #dbb840; }
+    .btn-ghost { display: inline-flex; align-items: center; padding: 14px 28px; font-size: 13px; font-weight: 600; border: 1.5px solid rgba(245,240,232,0.25); color: rgba(245,240,232,0.7); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: border-color .2s, color .2s; }
+    .btn-ghost:hover { border-color: rgba(245,240,232,0.5); color: var(--cream); }
+
+    /* Footer */
+    .footer { padding: 36px 52px; display: flex; flex-direction: column; align-items: center; gap: 20px; border-top: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .footer-l { font-size: 12px; color: rgba(10,10,10,0.35); text-align: center; }
+    .footer-r { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .footer-r a { font-size: 12px; color: rgba(10,10,10,0.35); text-decoration: none; transition: color .2s; }
+    .footer-r a:hover { color: var(--gold); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav { padding: 12px 20px; }
+      .nav-logo { height: 56px; }
+      .nav-links { display: none; }
+      .nav-apply { display: none; }
+      .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+
+      .hero { min-height: auto; max-height: none; overflow: hidden; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-text { padding: 40px 20px; clip-path: none !important; }
+      .hero h1 { font-size: 32px; letter-spacing: -1px; }
+      .hero p { font-size: 15px; margin-bottom: 24px; }
+      .hero-btns { flex-direction: column; align-items: stretch; gap: 12px; }
+      .btn-primary, .btn-secondary { justify-content: center; padding: 16px 24px; font-size: 15px; }
+      .hero-image { max-height: 240px; }
+
+      .section { padding: 48px 20px; }
+      .two-col { grid-template-columns: 1fr; gap: 36px; }
+      .section h2 { font-size: 30px; letter-spacing: -.5px; }
+      p.lead { font-size: 18px; }
+
+      .comparison-grid { grid-template-columns: 1fr; margin-top: 32px; }
+      .comparison-box { padding: 28px 24px; }
+
+      .proof-grid { grid-template-columns: 1fr; margin-top: 32px; }
+      .proof-item { padding: 24px 20px; }
+
+      .icon-list { margin-top: 32px; }
+      .icon-item { gap: 16px; margin-bottom: 32px; }
+      .icon-item-num { font-size: 24px; }
+      .icon-item-text h3 { font-size: 18px; }
+      .icon-item-text p { font-size: 16px; }
+
+      .alert-box { padding: 24px; margin: 32px 0; }
+      .alert-box h3 { font-size: 20px; }
+      .alert-box p { font-size: 16px; }
+
+      .cta-strip { flex-direction: column; align-items: stretch; padding: 48px 20px; gap: 28px; }
+      .cta-strip h2 { font-size: 28px; }
+      .cta-btns { flex-direction: column; gap: 10px; }
+      .btn-gold, .btn-ghost { justify-content: center; padding: 16px 24px; font-size: 15px; }
+
+      .footer { padding: 32px 20px; gap: 16px; }
+    }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="09191b0b-b076-4f74-b0d5-21f43ace8389"></script>
+</head>
+<body>
+
+  <!-- Mobile nav drawer -->
+  <div class="nav-drawer" id="navDrawer">
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
+    <a href="index.html" onclick="closeDrawer()">Home</a>
+    <a href="index.html#why-opalops" onclick="closeDrawer()">Why OpalOps</a>
+    <a href="index.html#services" onclick="closeDrawer()">Services</a>
+    <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
+    <a href="embedded.html" onclick="closeDrawer()">Embedded Crew</a>
+    <a href="#" class="drawer-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave" onclick="closeDrawer()">Request &nbsp;→</a>
+    <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html"><img class="nav-logo" src="images/opalopslogo.png" alt="OpalOps"></a>
+    <div class="nav-links">
+      <a href="index.html#why-opalops">Why OpalOps</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#our-work">Our Work</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="embedded.html">Embedded Crew</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
+      <a href="#" class="nav-cta" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Request a Crew</a>
+    </div>
+    <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" style="background: #0a0a0a;">
+    <div class="hero-inner">
+      <div class="hero-text" style="background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);">
+        <div class="hero-tag" style="color: var(--gold-light);">
+          <span style="background: var(--gold-light);"></span>Built for compliance
+        </div>
+        <h1 style="color: var(--cream);">Eliminate contractor<br>liability. Full <em style="color: var(--gold-light);">compliance.</em></h1>
+        <p style="color: rgba(245,240,232,0.7);">1099 contractors expose you to significant legal and financial risk. OpalOps provides W-2 crews with full workers' compensation, bonding, and compliance built-in. Zero risk. Full coverage.</p>
+        <div class="hero-btns">
+          <a href="#" class="btn-primary" style="background: var(--gold-light); color: #0a0a0a;" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get Compliant Crew &nbsp;→</a>
+          <a href="#the-problem" class="btn-secondary" style="color: var(--cream); border-color: rgba(245,240,232,0.3);">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          style="width:100%; height:100%; min-height:460px; object-fit:cover; display:block; flex:1; clip-path:polygon(0 0, 100% 0, 100% 100%, 15% 100%); filter:sepia(1) contrast(1.18) saturate(1.15) brightness(1.04);">
+          <source src="https://pub-fb44af18bef9457d915e1db18a126c88.r2.dev/4-3-hero.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="section section-white" id="the-problem">
+    <div class="section-tag">Why it matters</div>
+    <h2>The cost of 1099 <em>contractors.</em></h2>
+    <p class="lead">1099 misclassification isn't just risky — it's expensive. The DOL is actively enforcing.</p>
+
+    <div class="comparison-grid">
+      <div class="comparison-box risk">
+        <h3>1099 Contractors</h3>
+        <ul>
+          <li>No workers' compensation coverage</li>
+          <li>Misclassification lawsuits from DOL</li>
+          <li>Back wages liability</li>
+          <li>Fines up to $10,000+ per violation</li>
+          <li>Class action exposure (CA, NY)</li>
+          <li>Reputational damage from enforcement</li>
+          <li>Crew unreliability & no-shows</li>
+        </ul>
+      </div>
+      <div class="comparison-box safe">
+        <h3>OpalOps W-2 Crews</h3>
+        <ul>
+          <li>Legally compliant W-2 employment</li>
+          <li>Full workers' comp coverage (NYSIF)</li>
+          <li>All payroll & taxes handled by us</li>
+          <li>Fidelity bond protection</li>
+          <li>Background checks included</li>
+          <li>Zero compliance risk</li>
+          <li>Reliable, consistent crews</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOL Alert -->
+  <section class="section section-cream" id="dol-enforcement">
+    <div class="alert-box">
+      <h3>Recent DOL Action on Misclassification</h3>
+      <p>The U.S. Department of Labor has dramatically increased enforcement against companies misclassifying workers as 1099 contractors. If audited, violations can result in:</p>
+      <ul>
+        <li><strong>Back wages</strong> — Significant financial penalties reaching back multiple years</li>
+        <li><strong>Fines</strong> — Up to $10,000+ per violation, multiplied across violations</li>
+        <li><strong>Class action lawsuits</strong> — Especially in NY and CA, where state labor boards are aggressive</li>
+        <li><strong>Public enforcement actions</strong> — Reputational damage and lost business</li>
+      </ul>
+      <p style="margin-top: 20px; color: #c41e3a; font-weight: 600;">With OpalOps, you eliminate this risk entirely.</p>
+    </div>
+  </section>
+
+  <!-- Our Guarantees -->
+  <section class="section section-white" id="our-guarantees">
+    <div class="section-tag">Your protection</div>
+    <h2>OpalOps compliance <em>guarantees.</em></h2>
+    <p class="lead">We handle the compliance so you don't have to. Full coverage on every job.</p>
+
+    <div class="icon-list">
+      <div class="icon-item">
+        <div class="icon-item-num">✓</div>
+        <div class="icon-item-text">
+          <h3>NYSIF Workers' Compensation</h3>
+          <p>Active workers' compensation coverage (Policy Q 2677 458-8). Full coverage for all crew, all job types. Claims handled, documented, audit-ready.</p>
+        </div>
+      </div>
+
+      <div class="icon-item">
+        <div class="icon-item-num">✓</div>
+        <div class="icon-item-text">
+          <h3>W-2 Payroll & Tax Compliance</h3>
+          <p>Patriot Software payroll processing. Quarterly filings, year-end W-2s. Federal, state, and local compliance built-in. We file everything, you stay protected.</p>
+        </div>
+      </div>
+
+      <div class="icon-item">
+        <div class="icon-item-num">✓</div>
+        <div class="icon-item-text">
+          <h3>Fidelity Bond Protection</h3>
+          <p>Full fidelity bonding (Bond BX0084515, BAW Int'l Group). Crew bonded against theft and damage. Coverage on every deployment, every job.</p>
+        </div>
+      </div>
+
+      <div class="icon-item">
+        <div class="icon-item-num">✓</div>
+        <div class="icon-item-text">
+          <h3>Background Checks & Vetting</h3>
+          <p>Every crew member verified. Clean background checks, proven experience, reliability track record. You get a professional team, not a random pickup.</p>
+        </div>
+      </div>
+
+      <div class="icon-item">
+        <div class="icon-item-num">✓</div>
+        <div class="icon-item-text">
+          <h3>General Liability Insurance</h3>
+          <p>Full general liability coverage ($1M/$2M). Certificate of Insurance available on request. Complete protection across all operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="section section-dark">
+    <div class="section-tag" style="color: var(--gold-light);">
+      <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>
+      Built for you
+    </div>
+    <h2 style="color: var(--cream);">Compliance-first <em>partners.</em></h2>
+    <p class="lead" style="color: rgba(245,240,232,0.6);">OpalOps serves companies that care about compliance as much as they care about results:</p>
+
+    <div class="proof-grid">
+      <div class="proof-item">
+        <h3>Event Production</h3>
+        <p>Experiential agencies, AV/technical production, exhibit houses, and trade show producers who need reliable crew without legal exposure.</p>
+      </div>
+      <div class="proof-item">
+        <h3>Logistics & Warehousing</h3>
+        <p>3PL operators, fulfillment centers, and warehouse managers who need on-demand labor with compliance built-in.</p>
+      </div>
+      <div class="proof-item">
+        <h3>Hospitality & Venues</h3>
+        <p>Event venues, convention centers, and hospitality operators serving events and conferences with professional crews.</p>
+      </div>
+      <div class="proof-item">
+        <h3>Government Contracts</h3>
+        <p>Organizations pursuing government work (NYC Parks, DCAS, etc.) who need M/WBE-certified, compliant staffing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section-cream" id="how-it-works">
+    <div class="section-tag">Getting started</div>
+    <h2>Compliance crew in <em>3 steps.</em></h2>
+
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
+      <div style="padding: 40px 32px; background: var(--white); text-align: center;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">01 — Request</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Tell us what you need</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Describe your event, crew size, timeline, and scope. We'll respond with a flat-rate quote within 24 hours.</p>
+      </div>
+      <div style="padding: 40px 32px; background: var(--white); text-align: center;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">02 — Confirm</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Confirm & approve</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Know the cost upfront. We handle all compliance, payroll, taxes, and insurance. You stay protected.</p>
+      </div>
+      <div style="padding: 40px 32px; background: var(--white); text-align: center;">
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">03 — Deploy</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Crew shows up prepared</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Professional crew arrives on time, works hard, handles the job. Full compliance and protection throughout.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <div class="cta-strip" id="contact">
+    <div>
+      <h2>Ready for compliant crew?</h2>
+      <p>Flat rate. Quote within 24 hours. Full compliance guaranteed.</p>
+      <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 20px;">
+        <a href="tel:8444781693" style="font-size: 18px; font-weight: 600; color: var(--gold-light); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+          <span>☎</span> (844) 478-1693
+        </a>
+        <a href="mailto:accounts@opalops.us" style="font-size: 18px; font-weight: 600; color: var(--gold-light); text-decoration: none; display: flex; align-items: center; gap: 8px;">
+          <span>✉</span> accounts@opalops.us
+        </a>
+      </div>
+    </div>
+    <div class="cta-btns">
+      <a href="#" class="btn-gold" data-tally-open="0QZDry" data-tally-width="400" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Get Compliant Crew &nbsp;→</a>
+      <a href="index.html" class="btn-ghost">Back to Home</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-r">
+      <a href="index.html">Home</a>
+      <a href="index.html#why-opalops">Why OpalOps</a>
+      <a href="index.html#services">Services</a>
+      <a href="embedded.html">Embedded Crew</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="https://tally.so/r/81eeRk">Apply for Work</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+    <div class="footer-l">&copy; 2026 RRM Services LLC &middot; OpalOps &middot; Woodside, NY &middot; (844) 478-1693</div>
+  </footer>
+
+  <script>
+    function openDrawer() {
+      document.getElementById('navDrawer').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      document.getElementById('navDrawer').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.getElementById('navDrawer').addEventListener('click', function(e) {
+      if (e.target === this) closeDrawer();
+    });
+  </script>
+
+</body>
+</html>
