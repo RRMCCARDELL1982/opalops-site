@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service | OpalOps</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --cream: #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav-logo { height: 112px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-apply:hover { color: var(--gold); }
+    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
+    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+    .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
+    .nav-drawer { display: none; position: fixed; inset: 0; background: var(--cream); z-index: 200; flex-direction: column; align-items: center; justify-content: center; gap: 32px; padding: 24px; }
+    .nav-drawer.open { display: flex; }
+    .nav-drawer a { font-size: 22px; font-weight: 600; color: var(--black); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: color .2s; }
+    .nav-drawer a:hover { color: var(--gold); }
+    .nav-drawer .drawer-cta { margin-top: 8px; padding: 16px 40px; background: var(--gold); color: var(--cream); font-size: 16px; font-weight: 700; border-radius: 2px; cursor: pointer; border: none; }
+    .nav-drawer .drawer-apply { font-size: 14px; color: rgba(10,10,10,0.5); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
+    .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
+    .page-header { padding: 72px 52px 56px; border-bottom: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .page-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .page-tag::before { content: ''; display: block; width: 22px; height: 1.5px; background: var(--gold); }
+    .page-header h1 { font-family: 'DM Serif Display', serif; font-size: 52px; line-height: 1.05; letter-spacing: -1.5px; color: var(--black); margin-bottom: 12px; }
+    .page-header p { font-size: 14px; color: rgba(10,10,10,0.45); }
+    .content { max-width: 780px; margin: 0 auto; padding: 64px 48px 96px; }
+    .content h2 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin: 48px 0 14px; padding-bottom: 10px; border-bottom: 1px solid rgba(10,10,10,0.08); }
+    .content h2:first-child { margin-top: 0; }
+    .content h3 { font-family: 'DM Serif Display', serif; font-size: 16px; color: var(--black); margin: 24px 0 8px; font-weight: 600; }
+    .content p { font-size: 15px; color: rgba(10,10,10,0.68); line-height: 1.8; margin-bottom: 14px; }
+    .content ul { margin: 0 0 14px 20px; display: flex; flex-direction: column; gap: 8px; }
+    .content ul li { font-size: 15px; color: rgba(10,10,10,0.68); line-height: 1.7; }
+    .content a { color: var(--gold); text-decoration: none; }
+    .content a:hover { text-decoration: underline; }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal.active {
+      display: flex;
+    }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 900px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 28px;
+      border: none;
+      background: none;
+      cursor: pointer;
+      color: #999;
+    }
+    .modal-close:hover {
+      color: #333;
+    }
+    .footer { padding: 28px 52px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(10,10,10,0.08); background: var(--cream); }
+    .footer-l { font-size: 12px; color: rgba(10,10,10,0.35); }
+    .footer-r { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-r a { font-size: 12px; color: rgba(10,10,10,0.35); text-decoration: none; transition: color .2s; }
+    .footer-r a:hover { color: var(--gold); }
+    @media (max-width: 768px) {
+      .nav { padding: 12px 20px; }
+      .nav-logo { height: 56px; }
+      .nav-links, .nav-apply, .nav-cta { display: none; }
+      .nav-hamburger { display: flex; }
+      .page-header { padding: 48px 24px 40px; }
+      .page-header h1 { font-size: 36px; }
+      .content { padding: 40px 24px 64px; }
+      .footer { flex-direction: column; gap: 16px; padding: 24px 20px; text-align: center; }
+      .footer-r { justify-content: center; }
+    }
+  </style>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="09191b0b-b076-4f74-b0d5-21f43ace8389"></script>
+</head>
+<body>
+
+  <div class="nav-drawer" id="navDrawer">
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
+    <a href="index.html#services" onclick="closeDrawer()">Services</a>
+    <a href="index.html#about" onclick="closeDrawer()">About</a>
+    <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
+    <a href="contact.html" onclick="closeDrawer()">Contact</a>
+    <a href="compliance.html" onclick="closeDrawer()">Compliance</a>
+    <a href="embedded.html" onclick="closeDrawer()">Embedded Crew</a>
+    <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
+    <button class="drawer-cta" onclick="openCrewModal(); closeDrawer();">Request a Crew</button>
+  </div>
+
+  <nav class="nav">
+    <a href="index.html"><img class="nav-logo" src="images/opalopslogo.png" alt="OpalOps"></a>
+    <div class="nav-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="contact.html">Contact</a>
+      <a href="compliance.html">Compliance</a>
+      <a href="embedded.html">Embedded Crew</a>
+    </div>
+    <div class="nav-right">
+      <a href="https://tally.so/r/81eeRk" class="nav-apply">Apply for Work</a>
+      <button class="nav-cta" onclick="openCrewModal()">Request a Crew</button>
+    </div>
+    <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="page-header">
+    <div class="page-tag">Legal</div>
+    <h1>Terms of Service</h1>
+    <p>Effective Date: June 13, 2026</p>
+  </div>
+
+  <div class="content">
+    <p>These Terms of Service ("Terms") govern your use of OpalOps services provided by RRM Services LLC ("OpalOps," "we," "us," or "our"). By requesting crew, accepting a quote, or engaging OpalOps services, you agree to these Terms and our Client Services Agreement.</p>
+
+    <h2>1. Services</h2>
+    <p>OpalOps provides on-demand labor staffing services including event crews, stagehands, warehouse workers, general laborers, movers, and cleanup crews in the New York and New Jersey market. All crew members are full W-2 employees with workers' compensation, general liability insurance, and fidelity bond coverage.</p>
+
+    <h2>2. Quotes and Pricing</h2>
+    <p>All quotes are flat-rate and reflect the agreed scope of work based on the information provided in your crew request. Pricing is subject to change if crew requirements, hours, or job conditions change materially from the original request. Scope changes must be agreed upon in writing before the scheduled event date. Quote prices are valid for 14 days from issuance.</p>
+
+    <h2>3. Payment Terms</h2>
+    <h3>Deposit & Balance</h3>
+    <p>A 50% deposit is required to confirm crew booking and reserve your event date. The remaining 50% balance is due within 5 business days of job completion. For extended or multi-week engagements, clients will be invoiced weekly on Fridays, with payment due within 5 business days of invoice receipt.</p>
+
+    <h3>Payment Methods</h3>
+    <p>Payments are processed securely via Stripe. Accepted payment methods include: ACH (direct debit), credit or debit card, and business check. For check payments, funds must be received and cleared in advance of the scheduled start date to allow sufficient processing time.</p>
+
+    <h3>Invoice Details</h3>
+    <p>A 50% deposit invoice will be issued upon quote approval. Upon job completion, a final invoice will be issued for the remaining 50% balance. Invoices include itemized crew breakdown, hours, rates, and terms. Undisputed invoices become final after 24 hours of shift completion.</p>
+
+    <h2>4. Late Payment & Fees</h2>
+    <p>Invoices unpaid after 10 business days from issuance are subject to a late fee of 1.5% per month on the outstanding balance. Repeated late payments or non-payment may result in suspension of future services and referral to collections.</p>
+
+    <h2>5. Cancellation Policy</h2>
+    <p>Cancellation terms are tiered based on notice provided:</p>
+    <ul>
+      <li><strong>More than 48 hours before deployment:</strong> No charge. Full deposit refunded within 5 business days.</li>
+      <li><strong>24–48 hours before deployment:</strong> 50% of estimated labor cost charged. Remaining deposit refunded within 5 business days.</li>
+      <li><strong>Less than 24 hours before deployment:</strong> 100% of estimated labor cost charged. No refund issued.</li>
+      <li><strong>Same-day cancellation after crew dispatch:</strong> 100% of actual labor cost incurred (crew wages, mileage, equipment) charged immediately.</li>
+    </ul>
+    <p>Cancellations must be communicated in writing via email to info@opalops.us. Cancellation time is measured from when OpalOps receives the cancellation notice, not when it was sent.</p>
+
+    <h2>6. Timekeeping & Hour Disputes</h2>
+    <p>OpalOps maintains official time records for all crew members deployed. Clients are responsible for reviewing and approving hours within 24 hours of shift completion. Time sheets are submitted via our crew management system or email. Undisputed hours become final after 24 hours and are not subject to revision. Any disputes must be raised in writing within 24 hours of shift completion.</p>
+
+    <h2>7. Non-Solicitation</h2>
+    <p>Clients may not directly solicit, hire, or engage any OpalOps worker introduced through our services for a period of 12 months following the last placement without written consent and payment of a conversion fee. The conversion fee is 20% of the worker's anticipated first-year compensation at the time of hire. This includes any direct hiring, contract work, or third-party placement. Violation of this clause may result in legal action for breach of contract.</p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>OpalOps shall not be liable for indirect, incidental, special, or consequential damages arising from the use of or inability to use our services, including but not limited to loss of profits, loss of data, or business interruption. Our total liability for any claim shall not exceed the total amount paid by the client for the specific job or engagement giving rise to the claim. This limitation applies regardless of the form of action (contract, tort, strict liability, etc.).</p>
+
+    <h2>9. Insurance & Worker Status</h2>
+    <p>All OpalOps crew members are W-2 employees covered under New York State Insurance Fund workers' compensation (Policy #Q 2677 458-8). General liability coverage ($1M per occurrence / $2M aggregate) is maintained under Next Insurance Policy NXTVT9F7WP-OO-GL. Fidelity bond coverage (Bond #BX0084515) protects against employee dishonesty. Clients do not need to provide additional insurance coverage for OpalOps crew, but may be required to add OpalOps as an additional insured if requested.</p>
+
+    <h2>10. Crew Conduct & Compliance</h2>
+    <p>OpalOps crew members are trained, insured, and fully compliant with state and federal labor laws. All crew members are subject to background checks and drug screenings. Clients are responsible for communicating job site safety requirements, rules, and site-specific policies to the lead crew member prior to work commencing. Any crew member conduct issues should be reported to OpalOps immediately during the job. OpalOps reserves the right to remove any crew member for violation of site rules, safety violations, or misconduct.</p>
+
+    <h2>11. Governing Law & Dispute Resolution</h2>
+    <p>These Terms and all OpalOps service agreements are governed by the laws of the State of New York, without regard to conflict of law principles. Any disputes arising from this agreement shall be resolved through binding arbitration administered by the American Arbitration Association (AAA) in Queens County, New York, in accordance with AAA Commercial Arbitration Rules. Each party waives the right to trial by jury.</p>
+
+    <h2>12. Changes to Terms</h2>
+    <p>OpalOps reserves the right to update these Terms at any time. Changes will be posted on this page with an updated effective date. Continued use of OpalOps services after any changes constitutes acceptance of the updated Terms. Material changes will be communicated via email to clients with active bookings.</p>
+
+    <h2>13. Contact Information</h2>
+    <p><strong>OpalOps / RRM Services LLC</strong><br>
+    5110 Broadway PMB 1152<br>
+    Woodside, NY 11377<br>
+    <a href="mailto:info@opalops.us">info@opalops.us</a><br>
+    844-478-1693</p>
+
+    <p style="margin-top: 48px; padding-top: 32px; border-top: 1px solid rgba(10,10,10,0.08); font-size: 13px; color: rgba(10,10,10,0.5);">By signing a quote or engaging OpalOps services, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and the attached OpalOps Client Services Agreement.</p>
+  </div>
+
+  <!-- CREW REQUEST MODAL -->
+  <div id="crewFormModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCrewModal()">&times;</button>
+      <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+      <script>
+        hbspt.forms.create({
+          portalId: "246296982",
+          formId: "d44fe5c9-7ec9-4640-8f53-4c53035cc1b0",
+          region: "na2"
+        });
+      </script>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-l">&copy; 2026 RRM Services LLC &middot; OpalOps &middot; Woodside, NY &middot; (844) 478-1693</div>
+    <div class="footer-r">
+      <a href="index.html">Home</a>
+      <a href="index.html#services">Services</a>
+      <a href="https://tally.so/r/81eeRk">Apply for Work</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:info@opalops.us">info@opalops.us</a>
+    </div>
+  </footer>
+
+  <script>
+    function openDrawer() { document.getElementById('navDrawer').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('navDrawer').classList.remove('open'); document.body.style.overflow = ''; }
+    document.getElementById('navDrawer').addEventListener('click', function(e) { if (e.target === this) closeDrawer(); });
+    
+    function openCrewModal() {
+      document.getElementById('crewFormModal').classList.add('active');
+    }
+    function closeCrewModal() {
+      document.getElementById('crewFormModal').classList.remove('active');
+    }
+    document.getElementById('crewFormModal').addEventListener('click', function(e) {
+      if (e.target === this) closeCrewModal();
+    });
+  </script>
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="938dc8da-7181-4bd5-af96-3a0ef3567b4c"></script>
+</body>
+</html>
