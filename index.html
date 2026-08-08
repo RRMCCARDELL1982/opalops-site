@@ -196,6 +196,18 @@
     .social-link:hover { background: var(--gold-light); }
     .social-link svg { width: 22px; height: 22px; fill: #ede9e2; stroke: none; display: block; }
 
+    /* Service Detail Modal */
+    .service-modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+    .service-modal-overlay.active { display: flex; }
+    .service-modal { background: var(--white); border-radius: 8px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; position: relative; }
+    .service-modal-close { position: absolute; top: 12px; right: 16px; font-size: 26px; border: none; background: none; cursor: pointer; color: rgba(10,10,10,0.4); z-index: 2; line-height: 1; }
+    .service-modal img { width: 100%; height: 240px; object-fit: cover; display: block; filter: sepia(0.7) contrast(1.15) saturate(1.1) brightness(1.02); }
+    .service-modal-body { padding: 32px; }
+    .service-modal-body h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--black); margin-bottom: 18px; }
+    .service-modal-body ul { list-style: none; margin-bottom: 28px; }
+    .service-modal-body li { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.65); line-height: 1.6; padding-left: 24px; position: relative; margin-bottom: 12px; }
+    .service-modal-body li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
+
     /* ── MOBILE ── */
     @media (max-width: 768px) {
       html { overflow-x: hidden; }
@@ -408,25 +420,25 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
         <img src="images/Amazon-1-setup.webp" alt="Event and production crew setup">
         <h3>Event & Production<br>Crews</h3>
         <p>Install & Dismantle (I&D) teams, stagehands, riggers, setup crews, and production support. We handle the heavy lifting.</p>
-        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openCrewModal()">Request Crew →</a>
+        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('event')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/service-warehouse.webp" alt="Warehouse and logistics labor">
         <h3>Warehouse &<br>Logistics Labor</h3>
         <p>Pick-and-pack, receiving, inventory, fulfillment operations. We keep your workflow running.</p>
-        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openCrewModal()">Request Crew →</a>
+        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('warehouse')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/service-labor.webp" alt="General labor and support">
         <h3>General Labor &<br>Support Teams</h3>
         <p>On-demand crews for any job. Move teams, cleanup, event setup — whatever you need.</p>
-        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openCrewModal()">Request Crew →</a>
+        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('general')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/real_badges.webp" alt="Registration and check-in badge management">
         <h3>Registration &<br>Check-In</h3>
         <p>Front-of-house staff managing entry, credentials, badge printing, and guest flow.</p>
-        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openCrewModal()">Request Crew →</a>
+        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('registration')">Learn More →</a>
       </div>
     </div>
   </section>
@@ -606,6 +618,19 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     <div class="footer-l">&copy; 2026 RRM Services LLC &middot; OpalOps &middot; Woodside, NY &middot; (844) 478-1693</div>
   </footer>
 
+  <!-- SERVICE DETAIL MODAL -->
+  <div class="service-modal-overlay" id="serviceModalOverlay">
+    <div class="service-modal">
+      <button class="service-modal-close" onclick="closeServiceModal()" aria-label="Close">&times;</button>
+      <img id="serviceModalImg" src="" alt="">
+      <div class="service-modal-body">
+        <h3 id="serviceModalTitle"></h3>
+        <ul id="serviceModalList"></ul>
+        <a href="#" class="btn-primary" style="width:100%; justify-content:center; background: var(--gold-light); color: #0a0a0a;" onclick="closeServiceModal(); openCrewModal();">Request Crew &nbsp;→</a>
+      </div>
+    </div>
+  </div>
+
   <!-- REQUEST CREW MODAL -->
   <div id="crewFormModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 9999; align-items: center; justify-content: center;">
     <div style="background: white; padding: 30px; border-radius: 8px; width: 90%; max-width: 1000px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-height: 90vh; overflow-y: auto;">
@@ -634,6 +659,78 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     }
     document.getElementById('crewFormModal').addEventListener('click', function(e) {
       if (e.target === this) document.getElementById('crewFormModal').style.display = 'none';
+    });
+
+    // Service detail modal
+    const serviceData = {
+      event: {
+        img: 'images/Amazon-1-setup.webp',
+        title: 'Event & Production Crews',
+        bullets: [
+          'Install & Dismantle (I&D) teams',
+          'Stagehands and riggers',
+          'Setup and breakdown crews',
+          'Production support for load-in and load-out',
+          'Experienced on trade show floors and major venues'
+        ]
+      },
+      warehouse: {
+        img: 'images/service-warehouse.webp',
+        title: 'Warehouse & Logistics Labor',
+        bullets: [
+          'Pick-and-pack fulfillment',
+          'Receiving and inventory management',
+          'Warehouse floor support',
+          'Flexible shift coverage',
+          'Reliable crews that keep your workflow moving'
+        ]
+      },
+      general: {
+        img: 'images/service-labor.webp',
+        title: 'General Labor & Support Teams',
+        bullets: [
+          'On-demand crews for any job type',
+          'Move teams and site cleanup',
+          'Event setup and breakdown support',
+          'Flexible crew sizes, same-day scheduling',
+          'Screened, W-2 professional labor'
+        ]
+      },
+      registration: {
+        img: 'images/real_badges.webp',
+        title: 'Registration & Check-In',
+        bullets: [
+          'Front-of-house entry and guest flow management',
+          'Credential and badge verification',
+          'On-site badge printing',
+          'Registration desk staffing',
+          'Professional, guest-facing presentation'
+        ]
+      }
+    };
+
+    function openServiceModal(key) {
+      const data = serviceData[key];
+      if (!data) return;
+      document.getElementById('serviceModalImg').src = data.img;
+      document.getElementById('serviceModalImg').alt = data.title;
+      document.getElementById('serviceModalTitle').textContent = data.title;
+      const list = document.getElementById('serviceModalList');
+      list.innerHTML = '';
+      data.bullets.forEach(b => {
+        const li = document.createElement('li');
+        li.textContent = b;
+        list.appendChild(li);
+      });
+      document.getElementById('serviceModalOverlay').classList.add('active');
+    }
+
+    function closeServiceModal() {
+      document.getElementById('serviceModalOverlay').classList.remove('active');
+    }
+
+    document.getElementById('serviceModalOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeServiceModal();
     });
   </script>
 
