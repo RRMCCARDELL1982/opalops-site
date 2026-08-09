@@ -203,7 +203,8 @@
     .service-modal-close { position: absolute; top: 12px; right: 16px; font-size: 26px; border: none; background: none; cursor: pointer; color: rgba(10,10,10,0.4); z-index: 2; line-height: 1; }
     .service-modal img { width: 100%; height: 240px; object-fit: cover; display: block; filter: sepia(0.7) contrast(1.15) saturate(1.1) brightness(1.02); }
     .service-modal-body { padding: 32px; }
-    .service-modal-body h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--black); margin-bottom: 18px; }
+    .service-modal-body h3 { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--black); margin-bottom: 12px; }
+    .service-modal-bestfor { font-size: 14px; font-weight: 600; color: var(--gold); background: rgba(160,122,16,0.08); border-left: 3px solid var(--gold); padding: 10px 14px; margin-bottom: 20px; line-height: 1.5; }
     .service-modal-body ul { list-style: none; margin-bottom: 28px; }
     .service-modal-body li { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.65); line-height: 1.6; padding-left: 24px; position: relative; margin-bottom: 12px; }
     .service-modal-body li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
@@ -419,25 +420,25 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       <div class="service-card">
         <img src="images/Amazon-1-setup.webp" alt="Event and production crew setup">
         <h3>Event & Production<br>Crews</h3>
-        <p>Install & Dismantle (I&D) teams, stagehands, riggers, setup crews, and production support. We handle the heavy lifting.</p>
+        <p>Build-out labor for load-in and load-out — booths, staging, and I&D. Behind the scenes, before doors open.</p>
         <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('event')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/service-warehouse.webp" alt="Warehouse and logistics labor">
         <h3>Warehouse &<br>Logistics Labor</h3>
-        <p>Pick-and-pack, receiving, inventory, fulfillment operations. We keep your workflow running.</p>
+        <p>Ongoing facility labor — pick-and-pack, receiving, inventory. Ideal for warehouse work, not a single event date.</p>
         <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('warehouse')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/service-labor.webp" alt="General labor and support">
         <h3>General Labor &<br>Support Teams</h3>
-        <p>On-demand crews for any job. Move teams, cleanup, event setup — whatever you need.</p>
+        <p>The flexible catch-all — for jobs that don't fit neatly into the other three categories.</p>
         <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('general')">Learn More →</a>
       </div>
       <div class="service-card">
         <img src="images/real_badges.webp" alt="Registration and check-in badge management">
         <h3>Registration &<br>Check-In</h3>
-        <p>Front-of-house staff managing entry, credentials, badge printing, and guest flow.</p>
+        <p>The only guest-facing role — entry, credentials, badge printing, and greeting attendees directly.</p>
         <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('registration')">Learn More →</a>
       </div>
     </div>
@@ -625,6 +626,7 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       <img id="serviceModalImg" src="" alt="">
       <div class="service-modal-body">
         <h3 id="serviceModalTitle"></h3>
+        <p id="serviceModalBestFor" class="service-modal-bestfor"></p>
         <ul id="serviceModalList"></ul>
         <a href="#" class="btn-primary" style="width:100%; justify-content:center; background: var(--gold-light); color: #0a0a0a;" onclick="closeServiceModal(); openCrewModal();">Request Crew &nbsp;→</a>
       </div>
@@ -666,45 +668,49 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       event: {
         img: 'images/Amazon-1-setup.webp',
         title: 'Event & Production Crews',
+        bestFor: 'Best for: building out your space before doors open — booths, stages, floor graphics, structures.',
         bullets: [
-          'Install & Dismantle (I&D) teams',
-          'Stagehands and riggers',
-          'Setup and breakdown crews',
-          'Production support for load-in and load-out',
+          'Behind-the-scenes, physical build labor — not guest-facing',
+          'Install & Dismantle (I&D): booths, signage, floor graphics, staging',
+          'Stagehands and riggers for AV, trussing, and overhead work',
+          'Runs before the event (load-in) and after (load-out)',
           'Experienced on trade show floors and major venues'
         ]
       },
       warehouse: {
         img: 'images/service-warehouse.webp',
         title: 'Warehouse & Logistics Labor',
+        bestFor: 'Best for: ongoing facility work — not tied to a single event date.',
         bullets: [
-          'Pick-and-pack fulfillment',
-          'Receiving and inventory management',
-          'Warehouse floor support',
-          'Flexible shift coverage',
-          'Reliable crews that keep your workflow moving'
+          'Standing or recurring labor inside a warehouse or facility',
+          'Pick-and-pack, receiving, and inventory handling',
+          'Fulfillment operations and stock organization',
+          'Shifts scheduled by the day, week, or ongoing — not one-off',
+          'Distinct from event crews: no booth, staging, or guest contact'
         ]
       },
       general: {
         img: 'images/service-labor.webp',
         title: 'General Labor & Support Teams',
+        bestFor: 'Best for: when your need doesn\'t fit neatly into the other categories.',
         bullets: [
-          'On-demand crews for any job type',
-          'Move teams and site cleanup',
-          'Event setup and breakdown support',
-          'Flexible crew sizes, same-day scheduling',
-          'Screened, W-2 professional labor'
+          'The flexible, catch-all option — any job, any scope',
+          'Move teams, site cleanup, misc. event-day support',
+          'Fills gaps the other three categories don\'t cover',
+          'Same-day scheduling, flexible crew size',
+          'Not guest-facing and not a fixed warehouse role'
         ]
       },
       registration: {
         img: 'images/real_badges.webp',
         title: 'Registration & Check-In',
+        bestFor: 'Best for: the face of your event — the only guest-facing role of the four.',
         bullets: [
-          'Front-of-house entry and guest flow management',
-          'Credential and badge verification',
-          'On-site badge printing',
-          'Registration desk staffing',
-          'Professional, guest-facing presentation'
+          'Front-of-house staff, directly interacting with attendees',
+          'Entry management, credential and badge verification',
+          'On-site badge printing at check-in',
+          'Manages guest flow and lines at the door',
+          'Professional presentation — represents your event to visitors'
         ]
       }
     };
@@ -715,6 +721,8 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       document.getElementById('serviceModalImg').src = data.img;
       document.getElementById('serviceModalImg').alt = data.title;
       document.getElementById('serviceModalTitle').textContent = data.title;
+      const bestFor = document.getElementById('serviceModalBestFor');
+      bestFor.textContent = data.bestFor;
       const list = document.getElementById('serviceModalList');
       list.innerHTML = '';
       data.bullets.forEach(b => {
