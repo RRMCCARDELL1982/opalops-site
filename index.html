@@ -672,57 +672,58 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     });
 
     // Service detail modal
-    const serviceData = {
-      event: {
-        img: 'images/Amazon-1-setup.webp',
-        title: 'Event & Production Crews',
-        bestFor: 'Best for: building out your space before doors open — booths, stages, floor graphics, structures.',
-        bullets: [
-          'Behind-the-scenes, physical build labor — not guest-facing',
-          'Install & Dismantle (I&D): booths, signage, floor graphics, staging',
-          'Stagehands and riggers for AV, trussing, and overhead work',
-          'Runs before the event (load-in) and after (load-out)',
-          'Experienced on trade show floors and major venues'
-        ]
-      },
-      warehouse: {
-        img: 'images/service-warehouse.webp',
-        title: 'Warehouse & Logistics Labor',
-        bestFor: 'Best for: ongoing facility work — not tied to a single event date.',
-        bullets: [
-          'Standing or recurring labor inside a warehouse or facility',
-          'Pick-and-pack, receiving, and inventory handling',
-          'Fulfillment operations and stock organization',
-          'Shifts scheduled by the day, week, or ongoing — not one-off',
-          'Distinct from event crews: no booth, staging, or guest contact'
-        ]
-      },
-      general: {
-        img: 'images/service-labor.webp',
-        title: 'General Labor & Support Teams',
-        bestFor: 'Best for: when your need doesn\'t fit neatly into the other categories.',
-        bullets: [
-          'The flexible, catch-all option — any job, any scope',
-          'Move teams, site cleanup, misc. event-day support',
-          'Fills gaps the other three categories don\'t cover',
-          'Same-day scheduling, flexible crew size',
-          'Not guest-facing and not a fixed warehouse role'
-        ]
-      },
-      registration: {
-        img: 'images/real_badges.webp',
-        title: 'Registration & Check-In',
-        bestFor: 'Best for: the face of your event — the only guest-facing role of the four.',
-        bullets: [
-          'Front-of-house staff, directly interacting with attendees',
-          'Entry management, credential and badge verification',
-          'On-site badge printing at check-in',
-          'Manages guest flow and lines at the door',
-          'Professional presentation — represents your event to visitors'
-        ]
-      }
-    };
-
+const serviceData = {
+  event: {
+    img: 'images/Amazon-1-setup.webp',
+    title: 'Event & Production Crews',
+    bestFor: 'Best for: building out your space before doors open — booths, stages, floor graphics, structures.',
+    bullets: [
+      'Behind-the-scenes, physical build labor — not guest-facing',
+      'Install & Dismantle (I&D): booths, signage, floor graphics, staging',
+      'Stagehands and riggers for AV, trussing, and overhead work',
+      'Forklift and cherry picker operators for elevated install work',
+      'Runs before the event (load-in) and after (load-out)',
+      'Experienced on trade show floors and major venues'
+    ]
+  },
+  warehouse: {
+    img: 'images/service-warehouse.webp',
+    title: 'Warehouse & Logistics Labor',
+    bestFor: 'Best for: ongoing facility work — not tied to a single event date.',
+    bullets: [
+      'Standing or recurring labor inside a warehouse or facility',
+      'Pick-and-pack, receiving, and inventory handling',
+      'Fulfillment operations and stock organization',
+      'Shifts scheduled by the day, week, or ongoing — not one-off',
+      'Distinct from event crews: no booth, staging, or guest contact'
+    ]
+  },
+  general: {
+    img: 'images/service-labor.webp',
+    title: 'General Labor & Support Teams',
+    bestFor: 'Best for: when your need doesn\'t fit neatly into the other categories.',
+    bullets: [
+      'The flexible, catch-all option — any job, any scope',
+      'Move teams, site cleanup, misc. event-day support',
+      'Forklift and cherry picker operators for general facility needs',
+      'Fills gaps the other three categories don\'t cover',
+      'Same-day scheduling, flexible crew size',
+      'Not guest-facing and not a fixed warehouse role'
+    ]
+  },
+  registration: {
+    img: 'images/real_badges.webp',
+    title: 'Registration & Check-In',
+    bestFor: 'Best for: the face of your event — the only guest-facing role of the four.',
+    bullets: [
+      'Front-of-house staff, directly interacting with attendees',
+      'Entry management, credential and badge verification',
+      'On-site badge printing at check-in',
+      'Manages guest flow and lines at the door',
+      'Professional presentation — represents your event to visitors'
+    ]
+  }
+};
     function openServiceModal(key) {
       const data = serviceData[key];
       if (!data) return;
