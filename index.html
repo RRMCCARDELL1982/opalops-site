@@ -648,6 +648,18 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       
       <script src="https://js-na2.hsforms.net/forms/embed/246296982.js" defer></script>
       <div class="hs-form-frame" data-region="na2" data-form-id="d44fe5c9-7ec9-4640-8f53-4c53035cc1b0" data-portal-id="246296982"></div>
+      <script>
+        (function() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var refCode = urlParams.get('referral_code');
+          if (refCode) {
+            var formFrame = document.querySelector('.hs-form-frame[data-form-id="d44fe5c9-7ec9-4640-8f53-4c53035cc1b0"]');
+            if (formFrame) {
+              formFrame.setAttribute('data-hs-prefill', 'referral_code=' + encodeURIComponent(refCode));
+            }
+          }
+        })();
+      </script>
     </div>
   </div>
 
