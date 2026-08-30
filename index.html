@@ -124,7 +124,7 @@
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
     /* Featured Works Grid */
-    .works-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
+    .works-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
     .work-card { position: relative; overflow: hidden; height: 340px; background: var(--white); cursor: pointer; }
     .work-card img { width: 100%; height: 100%; object-fit: cover; display: block; filter: sepia(0.7) contrast(1.15) saturate(1.1) brightness(1.02); transition: transform 0.5s ease, filter 0.3s ease; }
     .work-card:hover img { transform: scale(1.08); filter: sepia(0.5) contrast(1.2) saturate(1.2) brightness(1.05); }
@@ -134,7 +134,7 @@
     .work-card-overlay p { font-size: 18px; font-weight: 500; color: rgba(245,240,232,0.8); line-height: 1.6; }
 
     /* Service Cards */
-    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px; }
     .service-card { padding: 48px 32px; background: var(--white); text-align: center; }
     .service-card img { width: 100%; height: 220px; object-fit: cover; display: block; margin-bottom: 24px; filter: sepia(0.7) contrast(1.15) saturate(1.1) brightness(1.02); }
     .service-card h3 { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--black); margin-bottom: 16px; }
@@ -409,6 +409,13 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
           <p>Front-of-house staff managing entry, credentials, and guest flow.</p>
         </div>
       </div>
+        <div class="work-card">
+        <img src="images/work-catering-chef.jpg" alt="OpalOps catering staff working an event">
+        <div class="work-card-overlay">
+          <h3>Catering & Chef Support</h3>
+          <p>Kitchen prep, plating, and service support that keeps catering operations running.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -441,6 +448,12 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
         <h3>Registration &<br>Check-In</h3>
         <p>The only guest-facing role — entry, credentials, badge printing, and greeting attendees directly.</p>
         <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('registration')">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <img src="images/service-chef-catering.jpg" alt="Charcuterie and catering setup for event chef support">
+        <h3>Event Chef Support &<br>Catering Transport</h3>
+        <p>Kitchen support labor and drivers for catering operations — chef assistants, prep support, and transport for equipment and product.</p>
+        <a href="#" style="display: inline-block; margin-top: 16px; color: var(--gold); text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; cursor: pointer;" onclick="openServiceModal('chef')">Learn More →</a>
       </div>
     </div>
   </section>
@@ -747,6 +760,18 @@ const serviceData = {
       'Professional presentation — represents your event to visitors'
     ]
   }
+    chef: {
+    img: 'images/service-chef-catering.jpg',
+    title: 'Event Chef Support & Catering Transport',
+    bestFor: 'Best for: catering operations needing kitchen labor and reliable transport — not front-of-house waitstaff.',
+    bullets: [
+      'Chef assistants and kitchen prep support for catered events',
+      'Drivers for transporting equipment, product, and supplies',
+      'Behind-the-scenes kitchen and logistics support, not guest-facing service',
+      'Flexible scheduling around event and delivery timelines',
+      'Screened, W-2 staff — same accountability as our event crews'
+    ]
+  },
 };
     function openServiceModal(key) {
       const data = serviceData[key];
