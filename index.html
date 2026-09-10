@@ -28,27 +28,23 @@
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
 
-    /* ── NAV ── */
-    .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 16px 40px;
-      border-bottom: 1px solid rgba(10,10,10,0.1);
-      background: var(--cream);
-      position: sticky; top: 0; z-index: 100;
-    }
-    .nav-links a { font-size: 16px; } /* was 18px */
-    .nav-links a { white-space: nowrap; }
-    .nav-links { gap: 24px; }
-    .nav-right { margin-left: 24px; }
-    .nav-logo { height: 112px; width: auto; display: block; }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-right { display: flex; gap: 12px; align-items: center; }
-    .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
-    .nav-apply:hover { color: var(--gold); }
-    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
-    .nav-cta:hover { background: var(--gold); color: var(--cream); }
+/* ── NAV ── */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid rgba(10,10,10,0.1);
+  background: var(--cream);
+  position: sticky; top: 0; z-index: 100;
+}
+.nav-logo { height: 112px; width: auto; display: block; }
+.nav-links { display: flex; gap: 16px; }
+.nav-links a { font-size: 14px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; white-space: nowrap; }
+.nav-links a:hover { color: var(--gold); }
+.nav-right { display: flex; gap: 12px; align-items: center; margin-left: 16px; flex-shrink: 0; }
+.nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+.nav-apply:hover { color: var(--gold); }
+.nav-cta { font-size: 14px; font-weight: 600; padding: 9px 18px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
+.nav-cta:hover { background: var(--gold); color: var(--cream); }
 
     /* Hamburger — hidden on desktop */
     .nav-hamburger {
