@@ -25,15 +25,21 @@
     :root { --cream: #ede9e2; --black: #0a0a0a; --gold: #a07a10; --gold-light: #c9a227; --white: #ffffff; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Outfit', sans-serif; background: var(--cream); color: var(--black); overflow-x: hidden; }
-    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 40px; border-bottom: 1px solid rgba(10,10,10,0.1); background: var(--cream); position: sticky; top: 0; z-index: 100; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px;
+      border-bottom: 1px solid rgba(10,10,10,0.1);
+      background: var(--cream);
+      position: sticky; top: 0; z-index: 100;
+    }
     .nav-logo { height: 112px; width: auto; display: block; }
-    .nav-links { display: flex; gap: 32px; }
-    .nav-links a { font-size: 18px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links { display: flex; gap: 16px; }
+    .nav-links a { font-size: 14px; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; white-space: nowrap; }
     .nav-links a:hover { color: var(--gold); }
-    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-right { display: flex; gap: 12px; align-items: center; margin-left: 16px; flex-shrink: 0; }
     .nav-apply { font-size: 16px; font-weight: 500; color: rgba(10,10,10,0.5); text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
     .nav-apply:hover { color: var(--gold); }
-    .nav-cta { font-size: 16px; font-weight: 600; padding: 11px 26px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
+    .nav-cta { font-size: 14px; font-weight: 600; padding: 9px 18px; border: 1.5px solid var(--gold); color: var(--gold); border-radius: 2px; text-decoration: none; letter-spacing: .5px; text-transform: uppercase; transition: background .2s, color .2s; white-space: nowrap; cursor: pointer; }
     .nav-cta:hover { background: var(--gold); color: var(--cream); }
     .nav-hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
     .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; }
@@ -69,7 +75,7 @@
     .footer-r a:hover { color: var(--gold); }
     @media (max-width: 768px) {
       .nav { padding: 12px 20px; }
-      .nav-logo { height: 56px; }
+      .nav-logo { height: 60px; }
       .nav-links, .nav-apply, .nav-cta { display: none; }
       .nav-hamburger { display: flex; }
       .page-header { padding: 48px 24px 40px; }
@@ -89,7 +95,9 @@
     <a href="index.html#services" onclick="closeDrawer()">Services</a>
     <a href="index.html#our-work" onclick="closeDrawer()">Our Work</a>
     <a href="index.html#how-it-works" onclick="closeDrawer()">How It Works</a>
+    <a href="promo-staffing.html" onclick="closeDrawer()">Promo Staffing</a>
     <a href="contact.html" onclick="closeDrawer()">Contact</a>
+    <a href="compliance.html" onclick="closeDrawer()">Compliance</a>
     <a href="embedded.html" onclick="closeDrawer()">Embedded Crew</a>
     <button class="drawer-cta" onclick="openCrewModal(); closeDrawer();">Request a Crew</button>
     <a href="https://tally.so/r/81eeRk" class="drawer-apply">Apply for Work</a>
@@ -101,7 +109,9 @@
       <a href="index.html#services">Services</a>
       <a href="index.html#our-work">Our Work</a>
       <a href="index.html#how-it-works">How It Works</a>
+      <a href="promo-staffing.html">Promo Staffing</a>
       <a href="contact.html">Contact</a>
+      <a href="compliance.html">Compliance</a>
       <a href="embedded.html">Embedded Crew</a>
     </div>
     <div class="nav-right">
