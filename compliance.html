@@ -589,6 +589,23 @@ s.parentNode.insertBefore(b, s);})(window.lintrk);
 <noscript>
 <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9580610&fmt=gif" />
 </noscript>
-
+<script>
+(function () {
+  var fired = false;
+  function fireLead(source) {
+    if (typeof gtag !== 'function' || fired) return;
+    fired = true;
+    setTimeout(function () { fired = false; }, 3000);
+    console.log('OpalOps lead conversion fired via', source);
+    gtag('event', 'conversion', { 'send_to': 'AW-18229099732/YdNtCLrT0dgcENT5p_RD' });
+  }
+  // older HubSpot embeds
+  window.addEventListener('message', function (e) {
+    if (e.data && e.data.type === 'hsFormCallback' && e.data.eventName === 'onFormSubmitted') fireLead('postMessage');
+  });
+  // newer HubSpot embeds
+  window.addEventListener('hs-form-event:on-submission:success', function () { fireLead('hs-event'); });
+})();
+</script>
 </body>
 </html>
