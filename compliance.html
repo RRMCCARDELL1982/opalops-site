@@ -59,15 +59,15 @@
     .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
 
     /* ── HERO ── */
-    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; max-height: 460px; }
+    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; min-height: 480px; }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
     .hero-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--gold-light); display: block; }
     .hero h1 { font-family: 'DM Serif Display', serif; font-size: 46px; line-height: 1.1; letter-spacing: -1.5px; color: var(--cream); max-width: 760px; margin-bottom: 16px; }
     .hero h1 em { font-style: italic; color: var(--gold-light); }
-    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 520px; line-height: 1.75; margin-bottom: 28px; font-weight: 500; }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 560px; line-height: 1.7; margin-bottom: 28px; font-weight: 500; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
     .hero-text { padding: 40px 40px 40px 80px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
-    .hero-image { display: flex; overflow: hidden; max-height: 460px; }
+    .hero-image { display: flex; overflow: hidden; min-height: 480px; }
     .hero-btns { display: flex; gap: 14px; align-items: center; }
     .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: var(--gold-light); color: #0a0a0a; font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
     .btn-primary:hover { background: #dbb840; }
@@ -239,10 +239,10 @@
     <div class="hero-inner">
       <div class="hero-text" style="background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);">
         <div class="hero-tag" style="color: var(--gold-light);">
-          <span style="background: var(--gold-light);"></span>Built for compliance
+          <span style="background: var(--gold-light);"></span>Built for Compliance
         </div>
-        <h1 style="color: var(--cream);">Eliminate contractor<br>liability. Full <em style="color: var(--gold-light);">compliance.</em></h1>
-        <p style="color: rgba(245,240,232,0.7);">1099 contractors expose you to significant legal and financial risk. OpalOps provides W-2 crews with full workers' compensation, bonding, and compliance built-in. Zero risk. Full coverage.</p>
+        <h1 style="color: var(--cream);">Eliminate Contractor Liability.<br>Full <em style="color: var(--gold-light);">Compliance.</em></h1>
+        <p style="color: rgba(245,240,232,0.7);">1099 contractors can expose your business to serious legal and financial risks. OpalOps provides W-2 crews with workers’ compensation, bonding, and compliance built in. For dependable event production crew in NYC, get full coverage and a safer staffing process.</p>
         <div class="hero-btns">
           <a href="#" class="btn-primary" style="background: var(--gold-light); color: #0a0a0a;" onclick="openCrewModal()">Get Compliant Crew &nbsp;→</a>
           <a href="#the-problem" class="btn-secondary" style="color: var(--cream); border-color: rgba(245,240,232,0.3);">Learn More</a>
@@ -263,33 +263,33 @@
 
   <!-- The Problem -->
   <section class="section section-white" id="the-problem">
-    <div class="section-tag">Why it matters</div>
-    <h2>The cost of 1099 <em>contractors.</em></h2>
-    <p class="lead">1099 misclassification isn't just risky — it's expensive. The DOL is actively enforcing.</p>
+    <div class="section-tag">Why It Matters</div>
+    <h2>The Cost of 1099 <em>Contractors</em></h2>
+    <p class="lead">Worker misclassification is more than a risk, it can be expensive. The Department of Labor continues to enforce worker-classification rules.</p>
 
     <div class="comparison-grid">
       <div class="comparison-box risk">
         <h3>1099 Contractors</h3>
         <ul>
-          <li>No workers' compensation coverage</li>
-          <li>Misclassification lawsuits from DOL</li>
-          <li>Back wages liability</li>
-          <li>Fines up to $10,000+ per violation</li>
-          <li>Class action exposure (CA, NY)</li>
-          <li>Reputational damage from enforcement</li>
-          <li>Crew unreliability & no-shows</li>
+          <li>No workers’ compensation coverage</li>
+          <li>Potential misclassification claims and lawsuits</li>
+          <li>Liability for unpaid back wages</li>
+          <li>Fines that can exceed $10,000 per violation</li>
+          <li>Class-action exposure in states such as California and New York</li>
+          <li>Reputational harm following enforcement</li>
+          <li>Unreliable crews and last-minute no-shows</li>
         </ul>
       </div>
       <div class="comparison-box safe">
         <h3>OpalOps W-2 Crews</h3>
         <ul>
-          <li>Legally compliant W-2 employment</li>
-          <li>Full workers' comp coverage (NYSIF)</li>
-          <li>All payroll & taxes handled by us</li>
+          <li>W-2 employment practices designed for compliance</li>
+          <li>Workers’ compensation coverage through NYSIF</li>
+          <li>Payroll and employment taxes managed by OpalOps</li>
           <li>Fidelity bond protection</li>
-          <li>Background checks available upon request</li>
-          <li>Zero compliance risk</li>
-          <li>Reliable, consistent crews</li>
+          <li>Background checks available on request</li>
+          <li>Compliance-focused staffing support</li>
+          <li>Dependable crews for consistent delivery</li>
         </ul>
       </div>
     </div>
@@ -299,37 +299,37 @@
   <section class="section section-cream" id="dol-enforcement">
     <div class="alert-box">
       <h3>Recent DOL Action on Misclassification</h3>
-      <p>The U.S. Department of Labor has dramatically increased enforcement against companies misclassifying workers as 1099 contractors. If audited, violations can result in:</p>
+      <p>The U.S. Department of Labor has increased its focus on companies that misclassify workers as 1099 contractors. An audit or enforcement action may lead to:</p>
       <ul>
-        <li><strong>Back wages</strong> — Significant financial penalties reaching back multiple years</li>
-        <li><strong>Fines</strong> — Up to $10,000+ per violation, multiplied across violations</li>
-        <li><strong>Class action lawsuits</strong> — Especially in NY and CA, where state labor boards are aggressive</li>
-        <li><strong>Public enforcement actions</strong> — Reputational damage and lost business</li>
+        <li><strong>Back wages</strong> — Substantial amounts owed for prior periods</li>
+        <li><strong>Fines</strong> — Penalties that may exceed $10,000 per violation and multiply across cases</li>
+        <li><strong>Class-action lawsuits</strong> — Particularly in states such as New York and California</li>
+        <li><strong>Public enforcement actions</strong> — Reputational damage and lost business opportunities</li>
       </ul>
-      <p style="margin-top: 20px; color: #c41e3a; font-weight: 600;">With OpalOps, you eliminate this risk entirely.</p>
+      <p style="margin-top: 20px; color: #c41e3a; font-weight: 600;">With OpalOps, you can reduce contractor-classification exposure and focus on delivering the job.</p>
     </div>
   </section>
 
   <!-- Our Guarantees -->
   <section class="section section-white" id="our-guarantees">
-    <div class="section-tag">Your protection</div>
-    <h2>OpalOps compliance <em>guarantees.</em></h2>
-    <p class="lead">We handle the compliance so you don't have to. Full coverage on every job.</p>
+    <div class="section-tag">Your Protection</div>
+    <h2>OpalOps Compliance <em>Guarantees.</em></h2>
+    <p class="lead">We manage key compliance requirements so you can focus on the work. Coverage and documentation support every deployment.</p>
 
     <div class="icon-list">
       <div class="icon-item">
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
-          <h3>NYSIF Workers' Compensation</h3>
-          <p>Active workers' compensation coverage (Policy Q 2677 458-8). Full coverage for all crew, all job types. Claims handled, documented, audit-ready.</p>
+          <h3>NYSIF Workers’ Compensation</h3>
+          <p>Active workers’ compensation coverage (Policy Q 2677 458-8). Coverage for crew members across supported job types, with claims documented and records kept audit-ready.</p>
         </div>
       </div>
 
       <div class="icon-item">
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
-          <h3>W-2 Payroll & Tax Compliance</h3>
-          <p>Patriot Software payroll processing. Quarterly filings, year-end W-2s. Federal, state, and local compliance built-in. We file everything, you stay protected.</p>
+          <h3>W-2 Payroll &amp; Tax Compliance</h3>
+          <p>Payroll processing through Patriot Software, quarterly filings, and year-end W-2s. Federal, state, and local requirements are managed as part of the service.</p>
         </div>
       </div>
 
@@ -337,15 +337,15 @@
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
           <h3>Fidelity Bond Protection</h3>
-          <p>Full fidelity bonding (Bond BX0084515, BAW Int'l Group). Crew bonded against theft and damage. Coverage on every deployment, every job.</p>
+          <p>Fidelity bonding (Bond BX0084515, BAW Int’l Group). Bond protection applies to crew deployments and jobs, subject to policy terms.</p>
         </div>
       </div>
 
       <div class="icon-item">
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
-          <h3>Background Checks & Vetting</h3>
-          <p>Proven experience and a reliability track record on every crew member. Formal background checks are available upon request for clients who require them. You get a professional team, not a random pickup.</p>
+          <h3>Background Checks &amp; Vetting</h3>
+          <p>Crew members are selected for experience and reliability. Formal background checks are available upon request for clients who need them. Expect a professional team, not an unvetted pickup.</p>
         </div>
       </div>
       
@@ -353,7 +353,7 @@
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
           <h3>ETCP-Certified Rigging Crews</h3>
-          <p>Riggers assigned to arena and theatre rigging hold current ETCP (Entertainment Technician Certification Program) certification. Credentials verified before dispatch — no exceptions.</p>
+          <p>Riggers assigned to arena and theatre rigging hold current ETCP (Entertainment Technician Certification Program) certification. Credentials are verified before dispatch.</p>
         </div>
       </div>
       
@@ -361,7 +361,7 @@
         <div class="icon-item-num">✓</div>
         <div class="icon-item-text">
           <h3>General Liability Insurance</h3>
-          <p>Full general liability coverage ($1M/$2M). Certificate of Insurance available on request. Complete protection across all operations.</p>
+          <p>General liability coverage of $1M/$2M. A Certificate of Insurance is available on request, supporting protection across operations.</p>
         </div>
       </div>
     </div>
@@ -371,51 +371,51 @@
   <section class="section section-dark">
     <div class="section-tag" style="color: var(--gold-light);">
       <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>
-      Built for you
+      Built for You
     </div>
-    <h2 style="color: var(--cream);">Compliance-first <em>partners.</em></h2>
-    <p class="lead" style="color: rgba(245,240,232,0.6);">OpalOps serves companies that care about compliance as much as they care about results:</p>
+    <h2 style="color: var(--cream);">Compliance-First <em>Partners.</em></h2>
+    <p class="lead" style="color: rgba(245,240,232,0.6);">OpalOps supports organizations that value compliance alongside results, including businesses looking for an experienced event crew in NYC with dependable staffing and compliance processes.</p>
 
     <div class="proof-grid">
       <div class="proof-item">
         <h3>Event Production</h3>
-        <p>Experiential agencies, AV/technical production, exhibit houses, and trade show producers who need reliable crew without legal exposure.</p>
+        <p>Experiential agencies, AV and technical production teams, exhibit houses, and trade show producers needing dependable crew support without unnecessary legal exposure.</p>
       </div>
       <div class="proof-item">
-        <h3>Logistics & Warehousing</h3>
-        <p>3PL operators, fulfillment centers, and warehouse managers who need on-demand labor with compliance built-in.</p>
+        <h3>Logistics &amp; Warehousing</h3>
+        <p>Third-party logistics operators, fulfillment centers, and warehouse managers seeking on-demand labor with compliance processes built in.</p>
       </div>
       <div class="proof-item">
-        <h3>Hospitality & Venues</h3>
-        <p>Event venues, convention centers, and hospitality operators serving events and conferences with professional crews.</p>
+        <h3>Hospitality &amp; Venues</h3>
+        <p>Event venues, convention centers, and hospitality operators that need professional crews for events, conferences, and live productions.</p>
       </div>
       <div class="proof-item">
         <h3>Government Contracts</h3>
-        <p>Organizations pursuing government work (NYC Parks, DCAS, etc.) who need M/WBE-certified, compliant staffing.</p>
+        <p>Organizations pursuing government work, including NYC Parks and DCAS opportunities, that need M/WBE-certified and compliance-focused staffing.</p>
       </div>
     </div>
   </section>
 
   <!-- How It Works -->
   <section class="section section-cream" id="how-it-works">
-    <div class="section-tag">Getting started</div>
-    <h2>Compliance crew in <em>3 steps.</em></h2>
+    <div class="section-tag">Getting Started</div>
+    <h2>Your Compliance Crew in <em>3 Steps.</em></h2>
 
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">01 — Request</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Tell us what you need</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Describe your event, crew size, timeline, and scope. We'll respond with a flat-rate quote within 24 hours.</p>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Tell Us What You Need</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Share your event details, crew size, timeline, and scope. OpalOps will respond with a flat-rate quote within 24 hours.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">02 — Confirm</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Confirm & approve</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Know the cost upfront. We handle all compliance, payroll, taxes, and insurance. You stay protected.</p>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Review and Approve</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Know the price upfront. OpalOps manages compliance, payroll, taxes, and insurance so you can stay focused on the project.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">03 — Deploy</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Crew shows up prepared</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Professional crew arrives on time, works hard, handles the job. Full compliance and protection throughout.</p>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Your Crew Arrives Prepared</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">A professional crew arrives ready to work, supports the job, and follows the agreed plan—with compliance documentation and protection throughout.</p>
       </div>
     </div>
   </section>
