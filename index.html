@@ -138,15 +138,15 @@
     }
 
     /* ── HERO ── */
-    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; max-height: 460px; }
+    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; min-height: 480px; }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
     .hero-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--gold-light); display: block; }
     .hero h1 { font-family: 'DM Serif Display', serif; font-size: 46px; line-height: 1.1; letter-spacing: -1.5px; color: var(--cream); max-width: 760px; margin-bottom: 16px; }
     .hero h1 em { font-style: italic; color: var(--gold-light); }
-    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 520px; line-height: 1.75; margin-bottom: 28px; font-weight: 500; }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 560px; line-height: 1.7; margin-bottom: 28px; font-weight: 500; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
     .hero-text { padding: 40px 40px 40px 80px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
-    .hero-image { display: flex; overflow: hidden; max-height: 460px; }
+    .hero-image { display: flex; overflow: hidden; min-height: 480px; }
     .hero-btns { display: flex; gap: 14px; align-items: center; }
     .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: var(--gold-light); color: #0a0a0a; font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
     .btn-primary:hover { background: #dbb840; }
@@ -395,10 +395,10 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     <div class="hero-inner">
       <div class="hero-text" style="background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);">
         <div class="hero-tag" style="color: var(--gold-light);">
-          <span style="background: var(--gold-light);"></span>Built by a floor-level worker
+          <span style="background: var(--gold-light);"></span>BUILT BY A FLOOR-LEVEL WORKER
         </div>
-        <h1 style="color: var(--cream);">NYC Metro Event Crews.<br>Crew-founded<br>Floor-tested & <em style="color: var(--gold-light);">Ready.</em></h1>
-        <p style="color: rgba(245,240,232,0.7);">Based in Woodside, Queens. Same-day response. Crews that show up prepared, work hard, and stay until it's done. Built by someone who's worked production floors at NY Comic-Con, Javits Center, and major NYC venues.</p>
+        <h1 style="color: var(--cream);">NYC Metro Event Crews.<br>Crew-Founded, Floor-Tested &amp; <em style="color: var(--gold-light);">Ready.</em></h1>
+        <p style="color: rgba(245,240,232,0.7);">OpalOps, a Woodside, Queens-based company, provides dependable event staffing in NYC with same-day response and diligent personnel prepared to complete the task. Based on practical production experience at NY Comic-Con, Javits Center, and other NYC venues, we approach every event with ready professionals, trustworthy support, and a work-until-it-is-done mentality.</p>
         <div class="hero-btns">
           <a href="#" class="btn-primary" style="background: var(--gold-light); color: #0a0a0a;" onclick="openCrewModal()">Request a Crew &nbsp;→</a>
           <a href="#our-work" class="btn-secondary" style="color: var(--cream); border-color: rgba(245,240,232,0.3);">See What We Do</a>
@@ -421,11 +421,11 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <section class="section section-cream" id="why-opalops">
     <div class="two-col">
       <div>
-        <div class="section-tag">Our Story</div>
+        <div class="section-tag">OUR STORY</div>
         <h2>Why We Built <em>OpalOps.</em></h2>
-        <p class="lead">I've worked the floor at Javits Center, Comic-Con San Diego, Grace Hopper Conference, and Moscone Center — lead tech, foreman, supervisor on major productions, activations, and events. I've managed crews on massive stadium cleanouts and facility teardowns. I've seen clients stressed by crews that lack accountability, cut corners, or bring the wrong energy to the job. That's not how this works at OpalOps.</p>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7; margin-bottom: 16px;">That same standard doesn't just apply to events. It's how we approach every job we take on — event setup and teardown, general labor, warehouse and logistics support, administrative and office support, even community service projects. Whatever the work is, it gets the same crew, the same accountability, the same follow-through.</p>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">OpalOps is built on reliability. No flakes. No excuses. Just professional labor that gets the job done.</p>
+        <p class="lead">I've worked as a lead tech, foreman, and supervisor on significant productions, brand activations, and events at Javits Center, Comic-Con San Diego, Grace Hopper Conference, and Moscone Center. I have personally witnessed how a lack of accountability, negligent work, and the incorrect mindset can cause clients needless worry, from overseeing crews on large stadium cleanouts to facility teardowns. At OpalOps, we set a new benchmark for event production in NYC by offering trustworthy event staff in NYC who provide knowledgeable assistance, dependable execution, and a dedication to completing every task correctly.</p>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7; margin-bottom: 16px;">Events are not exempt from this same standard. We offer trustworthy assistance with general labor, warehouse and logistics operations, administrative and office support, community service projects, and event setup and breakdown. We deliver the same competent staff, accountability, and follow-through from beginning to end, regardless of the demands of the task.</p>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Reliability is the foundation of OpalOps. No flakes. No justifications. Just expert work that completes the task.</p>
         <a href="#" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; background: var(--gold-light); color: #0a0a0a;" onclick="openCrewModal()">Request a Quote &nbsp;→</a>
       </div>
       <div style="background: var(--white); padding: 32px; border-left: 4px solid var(--gold); display: flex; flex-direction: column; justify-content: center;">
@@ -438,9 +438,9 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
 
   <!-- Featured Works -->
   <section class="section section-white" id="our-work">
-    <div class="section-tag">Our work</div>
-    <h2 style="margin-bottom: 20px;">The labor that <em>powers events.</em></h2>
-    <p class="lead">We're the crew behind the scenes — handling load-ins, booth operations, logistics, and warehouse support. Professional, reliable, and always ready to work.</p>
+    <div class="section-tag">Our Work</div>
+    <h2 style="margin-bottom: 20px;">The Labor That <em>Powers Events</em></h2>
+    <p class="lead">With trustworthy crews managing load-ins, booth operations, logistics, and warehouse support, OpalOps drives events behind the scenes as one of the reputable event production companies in NYC that you can rely on for expert labor support. From setup to dismantle, your event operations will go smoothly thanks to the professionalism, dependability, and hands-on work ethic that our staff provides to every job.</p>
     
     <div class="works-grid">
       <div class="work-card">
@@ -483,14 +483,14 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
 
   <!-- Services -->
   <section class="section section-cream" id="services">
-    <div class="section-tag">What we provide</div>
-    <h2 style="margin-bottom: 40px;">Professional crews for every<br>operational <em>need.</em></h2>
+    <div class="section-tag">WHAT WE PROVIDE</div>
+    <h2 style="margin-bottom: 40px;">Professional Crews for Every<br>Operational <em>Need.</em></h2>
     
     <div class="services-grid">
       <div class="service-card" id="service-event">
         <img src="images/Amazon-1-setup.webp" alt="Event and production crew setup">
-        <h3>Event & Production<br>Crews</h3>
-        <p>Build-out labor for load-in and load-out — booths, staging, and I&D. Behind the scenes, before doors open.</p>
+        <h3>Crews for Events &<br>Production</h3>
+        <p>Dependable event staffing in New York for staging, I&amp;D, booth installs, load-ins, and load-outs. To make sure everything is prepared before the doors open, our workers take care of the behind-the-scenes labor.</p>
         <button class="service-toggle" onclick="toggleService('service-event')">Learn More <span class="service-toggle-icon">+</span></button>
         <div class="service-detail">
           <div class="service-detail-inner">
@@ -508,8 +508,8 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       </div>
       <div class="service-card" id="service-promo">
         <img src="images/WendyPromo.webp" alt="Brand ambassador sampling product at an in-store promo station">
-        <h3>Brand Ambassador &<br>Promo Staffing</h3>
-        <p>W-2 brand ambassadors and product demo staff for trade shows, street teams, and pop-up activations.</p>
+        <h3>Promotional Staffing &<br>Brand Ambassadors</h3>
+        <p>W-2 product demonstration teams and brand ambassadors for pop-up activations, street promotions, and trade exhibitions. We provide expert, captivating on-site support to help brands engage with consumers.</p>
         <button class="service-toggle" onclick="toggleService('service-promo')">Learn More <span class="service-toggle-icon">+</span></button>
         <div class="service-detail">
           <div class="service-detail-inner">
@@ -581,8 +581,8 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       </div>
       <div class="service-card" id="service-chef">
         <img src="images/service-chef-catering.jpg" alt="Charcuterie and catering setup for event chef support">
-        <h3>Event Chef Support &<br>Catering Transport</h3>
-        <p>Kitchen support labor and drivers for catering operations — chef assistants, prep support, and transport for equipment and product.</p>
+        <h3>Support for Event Chefs &<br>Catering Transportation</h3>
+        <p>Reliable kitchen helpers, assistance with food preparation, and transportation for event materials, equipment, and goods will keep catering operations going efficiently. Our event production crew in NYC helps catering teams keep organized and adhere to event schedules by offering dependable behind-the-scenes support.</p>
         <button class="service-toggle" onclick="toggleService('service-chef')">Learn More <span class="service-toggle-icon">+</span></button>
         <div class="service-detail">
           <div class="service-detail-inner">
@@ -599,8 +599,8 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       </div>
       <div class="service-card" id="service-it">
         <img src="images/Richard-cords.webp" alt="OpalOps crew member coiling event cabling and cords for load-in">
-        <h3>Event IT<br>Infrastructure Support</h3>
-        <p>On-site labor for event technology setup — cable running, check-in booth assembly, and general event-tech install/breakdown.</p>
+        <h3>IT Infrastructure Support<br>for Events</h3>
+        <p>For event technology installations, such as cable running, network and AV cabling, check-in booth assembly, and event-tech setup and disassembly, get trustworthy on-site personnel. Our team helps ensuring that your technical infrastructure is ready when it counts by supporting effective event preparation.</p>
         <button class="service-toggle" onclick="toggleService('service-it')">Learn More <span class="service-toggle-icon">+</span></button>
         <div class="service-detail">
           <div class="service-detail-inner">
@@ -623,27 +623,27 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     <div>
       <div class="section-tag">
         <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold);margin-right:8px;vertical-align:middle;"></span>
-        Getting started
+        Getting Started
       </div>
-      <h2 style="margin-bottom: 24px; text-align: left;">Start with one <em>job.</em></h2>
-      <p class="lead" style="margin-bottom: 32px; text-align: left;">Request crew, get quoted same day, crew shows up and handles it. Here's what's consistent:</p>
+      <h2 style="margin-bottom: 24px; text-align: left;">Start with One <em>Job.</em></h2>
+      <p class="lead" style="margin-bottom: 32px; text-align: left;">Need reliable event staff? Tell us what you need, receive a quote within 24 hours, and let our crew handle the work. Here's what you can expect:</p>
     </div>
 
     <div class="getting-started-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-size: 32px; color: var(--gold); margin-bottom: 16px;">✓</div>
         <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Same-Day Quote</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Tell us your needs. Clear quote within 24 hours — transparent rates, no surprises.</p>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Share your staffing requirements and get a clear, transparent quote within 24 hours, with straightforward pricing and no hidden surprises.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-size: 32px; color: var(--gold); margin-bottom: 16px;">✓</div>
         <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Professional Crew</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Crew shows up on time, prepared, works hard. No shortcuts.</p>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Count on a dependable, hardworking crew that arrives on time, comes prepared, and gets the job done right.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-size: 32px; color: var(--gold); margin-bottom: 16px;">✓</div>
         <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Fully Insured</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Fully Bonded & Professional. We're covered, you're protected.</p>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Work with a fully bonded and insured team committed to professional service, giving you greater confidence and peace of mind throughout your event.</p>
       </div>
     </div>
 
@@ -661,8 +661,8 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       </div>
       <div class="content-col">
         <div class="section-tag">Premium Program</div>
-        <h2 style="margin-bottom: 20px;">Your brand.<br><em>Our crew.</em><br>Seamless.</h2>
-        <p class="lead">For agencies and exhibit houses who need professional operational crews to work under your banner — our crew becomes your crew. Fully trained, representing your standards, no OpalOps branding on the floor.</p>
+        <h2 style="margin-bottom: 20px;">Your brand.<br><em>Our crew.</em><br>Seamless execution.</h2>
+        <p class="lead">Our Premium Program provides a smooth extension of your team for agencies and show houses in need of trustworthy event labor in NYC working under their own brand. With no obvious OpalOps branding, our skilled staff is taught to adhere to your procedures, maintain your standards, and represent your brand on the show floor.</p>
         <a href="embedded.html" class="btn-primary" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 20px;">Learn More &nbsp;→</a>
       </div>
     </div>
@@ -671,28 +671,28 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <!-- Proof of Readiness -->
   <section class="section section-dark">
     <div class="section-tag" style="color: var(--gold-light);">
-      <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>Built right
+      <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>Built Right
     </div>
-    <h2 style="color: var(--cream); margin-bottom: 40px;">Professional operation.<br><em>You're protected.</em></h2>
-    <p class="lead">We run a real business. Full insurance, screened workers, and a crew that's accountable:</p>
+    <h2 style="color: var(--cream); margin-bottom: 24px;">Professional Operations.<br><em>You're Protected.</em></h2>
+    <p class="lead">We offer trustworthy trade show staffing in NYC through a professionally run business that prioritizes dependability, safety, and accountability. You can concentrate on your event with more peace of mind when you have insurance, highly vetted employees, and a team dedicated to high standards.</p>
     
     <div class="proof-grid">
       <div class="proof-item">
-        <h3>Workers' Compensation</h3>
-        <p>Active and current. Full coverage across all job types. You're protected if anything happens.</p>
+        <h3>Compensation for Workers</h3>
+        <p>Retain trust with current workers' compensation coverage for qualified workplace mishaps, assisting in worker protection and promoting ethical business practices.</p>
       </div>
       <div class="proof-item">
-        <h3>Bonded & Insured</h3>
-        <p>Full coverage across all operations. We're accountable and professional.</p>
+        <h3>Insurance &amp; Bonding</h3>
+        <p>Depend on a business that is bonded, insured, and competent and dedicated to responsible service, accountability, and reliable staffing assistance.</p>
       </div>
       <div class="proof-item">
-        <h3>Screened Workers</h3>
-        <p>Background checks required. You get reliable crew, not a random pickup.</p>
+        <h3>Workers Who Have Been Screened</h3>
+        <p>In order to help ensure that you obtain trustworthy, prepared specialists rather than unverified last-minute personnel, our screening procedure includes mandatory background checks.</p>
       </div>
       <div class="proof-item">
-        <h3>Professional Team</h3>
-        <p>Our crew are OpalOps employees — trained to our standards, vetted before every placement, and accountable to us, not an app.</p>
-        </div>
+        <h3>Expert Group</h3>
+        <p>Instead of using an app-based employment platform, our crew members are OpalOps employees who are checked prior to placement, trained to fulfill our standards, and answerable to our team.</p>
+      </div>
       <div class="proof-item">
         <h3>Backup Staff, No Added Cost</h3>
         <p>Programs of 8+ crew include a backup staff member on standby. If someone's out, we've got it covered — no gaps, no scrambling.</p>
@@ -706,24 +706,24 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
 
   <!-- How It Works -->
   <section class="section section-white" id="how-it-works">
-    <div class="section-tag">How it works</div>
-    <h2>Request a crew in <em>3 steps.</em></h2>
+    <div class="section-tag">How It Works</div>
+    <h2>Get Your Crew in <em>3 Simple Steps.</em></h2>
     
     <div class="steps">
       <div class="step">
-        <div class="step-num">01 — Tell us what you need</div>
-        <h3>Describe the job</h3>
-        <p>Share your event, crew size, timeline, and scope. We'll respond with a quote same day.</p>
+        <div class="step-num">01 — Share Your Requirements</div>
+        <h3>Tell Us About the Job</h3>
+        <p>Provide details about your event, staffing needs, schedule, and job requirements. We'll review your request and provide a clear quote within 24 hours.</p>
       </div>
       <div class="step">
-        <div class="step-num">02 — We build your crew</div>
-        <h3>Hand-picked team</h3>
-        <p>We assemble the right crew for your job. Experienced, reliable, ready to work.</p>
+        <div class="step-num">02 — We Assemble Your Team</div>
+        <h3>The Right Crew for the Job</h3>
+        <p>We select a crew suited to your specific requirements, bringing together dependable, experienced professionals who are prepared to get to work.</p>
       </div>
       <div class="step">
-        <div class="step-num">03 — Your crew shows up</div>
-        <h3>Execution</h3>
-        <p>Professional crew clocks in and handles the work. We manage everything behind the scenes.</p>
+        <div class="step-num">03 — Your Crew Gets to Work</div>
+        <h3>Seamless Execution</h3>
+        <p>Your crew arrives ready to perform and handles the assigned tasks professionally. We coordinate the behind-the-scenes details so you can focus on running your event.</p>
       </div>
     </div>
   </section>
@@ -732,27 +732,27 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <section class="section section-dark">
     <div class="section-tag" style="color: var(--gold-light);">
       <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>
-      Client feedback
+      Client Feedback
     </div>
-    <h2 style="color: var(--cream); margin-bottom: 0;">Trusted for reliable <em>professional crews.</em></h2>
+    <h2 style="color: var(--cream); margin-bottom: 0;">Trusted for Dependable <em>Professional Crews.</em></h2>
     
     <div class="testimony-grid">
       <div class="testimony">
-        <p>"Knowledgeable in event setup, attentive to immediate needs. Followed instructions and executed flawlessly."</p>
+        <p>"Their team demonstrated strong event setup knowledge, responded quickly to on-site needs, followed directions carefully, and delivered excellent results."</p>
         <div class="testimony-name">Sony Sanchez, P3 Global Services — Amazon Tour 2026</div>
       </div>
       <div class="testimony">
-        <p>"Their crew knows the work. They didn't need supervision and delivered quality labor."</p>
-        <div class="testimony-name">"Operations Manager, NYC Experiential Agency"</div>
+        <p>"The crew understood the job, worked independently with minimal supervision, and consistently delivered dependable, high-quality labor."</p>
+        <div class="testimony-name">Operations Manager, NYC Experiential Agency</div>
       </div>
       <div class="testimony">
-        <p>"Professional, reliable, and responsive. We've used them multiple times and keep coming back."</p>
+        <p>"Professional, responsive, and reliable every time. We've partnered with them on multiple occasions and continue to choose their team."</p>
         <div class="testimony-name">Warehouse Manager, Fulfillment Center</div>
       </div>
     </div>
     
     <div class="quote-block">
-      <p>Crew-founded. Client-focused. Built to deliver.</p>
+      <p>Crew-founded. Client-focused. Committed to delivering results.</p>
     </div>
   </section>
 

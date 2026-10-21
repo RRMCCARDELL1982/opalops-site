@@ -80,15 +80,15 @@
     .drawer-close { position: absolute; top: 18px; right: 20px; background: none; border: none; cursor: pointer; font-size: 28px; color: var(--black); line-height: 1; }
 
     /* ── HERO ── */
-    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; max-height: 460px; }
+    .hero { position: relative; background: #0a0a0a; border-bottom: 1px solid rgba(10,10,10,0.08); overflow: hidden; min-height: 480px; }
     .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 16px; }
     .hero-tag::before { content: ''; width: 22px; height: 1.5px; background: var(--gold-light); display: block; }
     .hero h1 { font-family: 'DM Serif Display', serif; font-size: 46px; line-height: 1.1; letter-spacing: -1.5px; color: var(--cream); max-width: 760px; margin-bottom: 16px; }
     .hero h1 em { font-style: italic; color: var(--gold-light); }
-    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 520px; line-height: 1.75; margin-bottom: 28px; font-weight: 500; }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; }
+    .hero p { font-size: 16px; color: rgba(245,240,232,0.7); max-width: 560px; line-height: 1.7; margin-bottom: 28px; font-weight: 500; }
+    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
     .hero-text { padding: 40px 40px 40px 80px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%); }
-    .hero-image { display: flex; overflow: hidden; max-height: 460px; }
+    .hero-image { display: flex; overflow: hidden; min-height: 480px; }
     .hero-btns { display: flex; gap: 14px; align-items: center; }
     .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 12px 26px; background: var(--gold-light); color: #0a0a0a; font-size: 14px; font-weight: 700; border-radius: 2px; text-decoration: none; transition: background .2s; cursor: pointer; }
     .btn-primary:hover { background: #dbb840; }
@@ -279,10 +279,10 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     <div class="hero-inner">
       <div class="hero-text" style="background: #0a0a0a; clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);">
         <div class="hero-tag" style="color: var(--gold-light);">
-          <span style="background: var(--gold-light);"></span>Promotions, demos & sampling
+          <span style="background: var(--gold-light);"></span>Promotions, demos &amp; sampling
         </div>
-        <h1 style="color: var(--cream);">Reliable brand ambassadors for<br>in-store demos & <em style="color: var(--gold-light);">product sampling.</em></h1>
-        <p style="color: rgba(245,240,232,0.7);">No-shows kill promotions. OpalOps provides W-2 brand ambassadors for in-store demos, sampling, and promotional campaigns — vetted, uniformed, and trained to represent your brand. Full compliance. Zero contractor risk.</p>
+        <h1 style="color: var(--cream);">Reliable brand ambassadors for<br>in-store demos, product sampling &amp;<br><em style="color: var(--gold-light);">promotional campaigns.</em></h1>
+        <p style="color: rgba(245,240,232,0.7);">No-shows disrupt promotions. OpalOps provides dependable W-2 brand ambassadors for in-store demos, product sampling, and promotional campaigns — screened, uniformed, and trained to represent your brand professionally. Full compliance. No contractor risk.</p>
         <div class="hero-btns">
           <a href="#" class="btn-primary" style="background: var(--gold-light); color: #0a0a0a;" onclick="openCrewModal()">Get a Fast Quote &nbsp;→</a>
           <a href="#why-it-matters" class="btn-secondary" style="color: var(--cream); border-color: rgba(245,240,232,0.3);">Learn More</a>
@@ -301,29 +301,29 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <section class="section section-white" id="why-it-matters">
     <div class="section-tag">Why it matters</div>
     <h2>The cost of unreliable <em>gig staffing.</em></h2>
-    <p class="lead">Gig-platform contractors don't answer to anyone but themselves. When they don't show, your brand takes the hit — not them.</p>
+    <p class="lead">Contractors using gig platforms are frequently not held directly accountable. When people don't show up, it's your brand that suffers, not them.</p>
 
     <div class="comparison-grid">
       <div class="comparison-box risk">
-        <h3>Gig-Platform Contractors</h3>
+        <h3>Contractors on Gig Platforms</h3>
         <ul>
-          <li>No accountability for no-shows</li>
-          <li>Inconsistent presentation & professionalism</li>
-          <li>No employer relationship or oversight</li>
+          <li>Absence of responsibility for missed shifts</li>
+          <li>Unreliable professionalism and presentation</li>
+          <li>Absence of direct employer supervision</li>
           <li>1099 misclassification exposure</li>
-          <li>No workers' compensation coverage</li>
-          <li>Unpredictable last-minute cancellations</li>
+          <li>Absence of workers' compensation insurance</li>
+          <li>Unexpected last-minute cancelations</li>
         </ul>
       </div>
       <div class="comparison-box safe">
-        <h3>OpalOps W-2 Crews</h3>
+        <h3>W-2 Crews for OpalOps</h3>
         <ul>
-          <li>Managed, scheduled, and confirmed</li>
-          <li>Trained, uniformed, brand-ready</li>
-          <li>Full employer accountability</li>
-          <li>Legally compliant W-2 employment</li>
-          <li>Full workers' comp & liability coverage</li>
-          <li>Backup staff on standby for larger programs</li>
+          <li>Expertly planned, coordinated, and verified</li>
+          <li>Brand-ready, uniformed, and well-trained</li>
+          <li>Unambiguous employer responsibility</li>
+          <li>W-2 employment that complies</li>
+          <li>Liability and workers' compensation insurance</li>
+          <li>For larger projects, backup personnel are available.</li>
         </ul>
       </div>
     </div>
@@ -332,29 +332,29 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <!-- What We Staff -->
   <section class="section section-cream" id="what-we-staff">
     <div class="section-tag">What we staff</div>
-    <h2>Promotions, demos & <em>sampling.</em></h2>
-    <p class="lead">Our crews handle the roles that make an in-store promotion run — from the first shopper approached to the final recap.</p>
+    <h2>Promotions, samples, and <em>demonstrations.</em></h2>
+    <p class="lead">From the initial customer interaction to the campaign summary, our teams oversee the crucial tasks that contribute to the success of in-store promotions.</p>
 
     <div class="icon-list">
       <div class="icon-item">
         <div class="icon-item-num">01</div>
         <div class="icon-item-text">
-          <h3>In-Store Demos & Sampling</h3>
-          <p>Trained, uniformed ambassadors who run your sampling station, engage shoppers, and represent your product with the polish it deserves.</p>
+          <h3>In-Store Samples &amp; Demos</h3>
+          <p>Ambassadors in uniform and with training oversee sampling stations, interact with customers, and present your goods with the expertise your company deserves.</p>
         </div>
       </div>
       <div class="icon-item">
         <div class="icon-item-num">02</div>
         <div class="icon-item-text">
-          <h3>Brand Ambassadors & Product Demo Staff</h3>
-          <p>Scripted product demos with real conversations, lead capture, and units sold tracked store by store.</p>
+          <h3>Product Demo Personnel &amp; Brand Ambassadors</h3>
+          <p>Capturing leads, having meaningful discussions with customers, engaging product demos, and tracking units sold by store.</p>
         </div>
       </div>
       <div class="icon-item">
         <div class="icon-item-num">03</div>
         <div class="icon-item-text">
-          <h3>Promotional Street Teams</h3>
-          <p>Reliable, energetic teams for street-level promotion and product sampling campaigns. Street teams that include food require extra lead time — see booking requirements below.</p>
+          <h3>Street Teams for Promotion</h3>
+          <p>Teams that are dependable and full of energy for product sampling and street promotions. Street teams that deal with food need more time to make reservations; see the guidelines below.</p>
         </div>
       </div>
     </div>
@@ -367,20 +367,20 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
 
   <!-- Booking & Training Requirements -->
   <section class="section section-white" id="booking-requirements">
-    <div class="section-tag">Booking requirements</div>
-    <h2>Plan ahead so your crew is <em>ready.</em></h2>
-    <p class="lead">Great promotions start with a trained crew. Here is the lead time we need.</p>
+    <div class="section-tag">Requirements for booking</div>
+    <h2>Make advance plans to ensure your workforce is <em>prepared.</em></h2>
+    <p class="lead">Planning is the first step to a successful campaign. This is the advance notice that your team needs to get ready.</p>
 
     <div class="req-grid">
       <div class="req-box">
-        <div class="req-label">Street teams with food</div>
-        <h3>Book 30–45 days ahead</h3>
-        <p>If your street team campaign includes food, we require at least 30 to 45 days of advance booking.</p>
+        <div class="req-label">Food-focused street teams</div>
+        <h3>Reserve 30 to 45 days in advance</h3>
+        <p>Bookings for food-based street team campaigns must be made at least 30 to 45 days in advance.</p>
       </div>
       <div class="req-box">
-        <div class="req-label">Training</div>
-        <h3>At least 1 week before</h3>
-        <p>We require at least one week before your activation to train your crew on your product, script, and brand standards.</p>
+        <div class="req-label">Instruction</div>
+        <h3>A minimum of one week prior</h3>
+        <p>To teach your staff on your products, scripts, and brand standards, we need at least one week before activation.</p>
       </div>
     </div>
   </section>
@@ -390,33 +390,33 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     <div class="section-tag" style="color: var(--gold-light);">
       <span style="display:inline-block;width:18px;height:1.5px;background:var(--gold-light);margin-right:8px;vertical-align:middle;"></span>Built right
     </div>
-    <h2 style="color: var(--cream);">Professional operation.<br><em>Your brand is protected.</em></h2>
-    <p class="lead">We run a real business. Full insurance, screened workers, and a crew that's accountable:</p>
+    <h2 style="color: var(--cream);">Expert operations.<br><em>Your brand is safeguarded.</em></h2>
+    <p class="lead">With complete insurance, screened employees, and responsible teams, we conduct business in a professional manner. Our dependable event setup crew in NYC facilitates efficient event execution and well-organized operations.</p>
 
     <div class="proof-grid">
       <div class="proof-item">
         <h3>W-2, Not 1099</h3>
-        <p>Protect your agency from misclassification risk. Every OpalOps staffer is a W-2 employee, fully covered.</p>
+        <p>Lower your agency's risk of misclassification. Each member of the OpalOps team has the necessary coverage as a W-2 employee.</p>
       </div>
       <div class="proof-item">
-        <h3>Workers' Compensation</h3>
-        <p>Active and current. Full coverage across all job types. You're protected if anything happens.</p>
+        <h3>Compensation for Workers</h3>
+        <p>In the event of an incident, having current and active coverage for all work types helps safeguard your company.</p>
       </div>
       <div class="proof-item">
-        <h3>Bonded & Insured</h3>
-        <p>Full coverage across all operations. We're accountable and professional.</p>
+        <h3>Insurance &amp; Bonding</h3>
+        <p>Thorough coverage of all aspects of our business, supported by a competent and responsible staff.</p>
       </div>
       <div class="proof-item">
-        <h3>Screened Workers</h3>
-        <p>Background checks required. You get reliable crew, not a random pickup.</p>
+        <h3>Workers Who Have Been Screened</h3>
+        <p>Background checks are necessary. Instead of using unscreened temporary workers, you get trustworthy pros.</p>
       </div>
       <div class="proof-item">
-        <h3>Professional Presentation</h3>
-        <p>Trained, uniformed staff who represent your brand the way you'd represent it yourself.</p>
+        <h3>Expert Presentation</h3>
+        <p>Uniformed, well-trained employees represent your brand with the same consideration and expertise you demand from your own workforce.</p>
       </div>
       <div class="proof-item">
-        <h3>Backup Staff, No Added Cost</h3>
-        <p>Programs of 8+ crew include a backup staff member on standby. If someone's out, we've got it covered.</p>
+        <h3>Backup Personnel at No Extra Cost</h3>
+        <p>A backup staff member is on standby for programs with eight or more crew members. We assist in covering your activation in the event that someone is unavailable.</p>
       </div>
     </div>
   </section>
@@ -435,7 +435,7 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
       <div>
         <div class="section-tag">Case study</div>
         <h2>Peach the Great: <em>six stores, one week.</em></h2>
-        <p class="lead">How OpalOps staffed in-store sampling across Manhattan, Queens and Long Island for the EU&rsquo;s &ldquo;Enjoy, It&rsquo;s From Europe&rdquo; campaign.</p>
+        <p class="lead">How OpalOps provided consistent promotional personnel at several sites while organizing in-store sampling for the EU's "Enjoy, It's From Europe" campaign throughout Manhattan, Queens, and Long Island.</p>
         <div class="cs-stats">
           <div class="cs-stat"><strong>~9,000</strong><span>Samples served</span></div>
           <div class="cs-stat"><strong>6</strong><span>Grocery stores</span></div>
@@ -475,14 +475,14 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
     </style>
     <div class="sample-grid">
       <div>
-        <div class="section-tag">The recap your brand receives</div>
-        <h2>Proof of every sample, <em>in one report.</em></h2>
-        <p class="lead">Every sampling campaign ends with a client-ready recap built from our own field-reporting system, so you see what happened in every store.</p>
+        <div class="section-tag">The summary that your brand gets</div>
+        <h2>Each sample's proof <em>in a single report.</em></h2>
+        <p class="lead">Our field-reporting system provides a client-ready summary at the end of each sample campaign, allowing you to see campaign results at each location.</p>
         <ul class="sample-list">
-          <li>Samples served, shoppers approached and real conversations, store by store</li>
-          <li>Engagement rate and units sold at the demo</li>
-          <li>What shoppers told us, grouped by theme</li>
-          <li>Area demographics from US Census data, shown as area residents rather than booth visitors</li>
+          <li>Samples were given out, customers were solicited, and deep discussions were monitored store by store.</li>
+          <li>Units sold and engagement rates during demonstrations</li>
+          <li>Customer reviews arranged according to recurrent topics</li>
+          <li>Local residents rather than booth visitors are represented by area demographics derived from US Census data.</li>
         </ul>
         <div class="sample-actions">
           <a href="#" class="btn-gold" onclick="openCrewModal(); return false;">Request a Quote &nbsp;&rarr;</a>
@@ -504,23 +504,23 @@ src="https://www.facebook.com/tr?id=1328932995234942&ev=PageView&noscript=1"
   <!-- Getting Started -->
   <section class="section section-cream" id="how-it-works">
     <div class="section-tag">Getting started</div>
-    <h2>Book a crew in <em>3 steps.</em></h2>
+    <h2>Book your crew in <em>3 steps.</em></h2>
 
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(10,10,10,0.08); border: 1px solid rgba(10,10,10,0.08); margin-top: 48px;">
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">01 — Request</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Tell us what you need</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Describe your promotion, stores, crew size, and dates. We'll respond with a quote same day.</p>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Tell us what you require</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Provide information on your promotion, including dates, crew size, locations, and details. On the same day, we will reply with a quote. Our skilled trade show staffing in NYC assists you in organizing dependable on-site assistance for exhibits and brand activations.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
-        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">02 — Confirm & Train</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">We build and train your crew</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Know the cost upfront. We assemble your crew and train them at least one week before your activation.</p>
+        <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">02 — Verify &amp; Instruct</div>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">We put your group together and train them</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Be aware of your expenses up front. At least one week before to your activation, we set up your team and finish the training.</p>
       </div>
       <div style="padding: 40px 32px; background: var(--white); text-align: center;">
         <div style="font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); letter-spacing: 1px; margin-bottom: 16px; font-weight: 500;">03 — Deploy</div>
-        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Your crew shows up</h3>
-        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Professional crew clocks in, represents your brand, and handles the work. No gaps, no scrambling.</p>
+        <h3 style="font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--black); margin-bottom: 12px;">Your crew shows up prepared</h3>
+        <p style="font-size: 18px; font-weight: 500; color: rgba(10,10,10,0.6); line-height: 1.7;">Our experts take care of the task, clock in, and represent your brand. Reliable execution without any gaps or last-minute scrambling. Our event setup crew in NYC assists in keeping your activation planned and on time for well-coordinated event operations. Additionally, our trade show staffing in NYC offers expert, brand-ready assistance for promotional events and exhibitions.</p>
       </div>
     </div>
   </section>
