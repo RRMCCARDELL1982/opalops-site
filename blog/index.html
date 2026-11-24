@@ -380,16 +380,6 @@
 
 
 </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RBY4HHVGR7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18229099732');
-  gtag('config', 'G-RBY4HHVGR7');
-</script>
-<script defer src="https://cloud.umami.is/script.js" data-website-id="09191b0b-b076-4f74-b0d5-21f43ace8389"></script>
 </head>
 <body>
 <div class="nav-drawer" id="navDrawer">
@@ -401,10 +391,10 @@
     <a href="../promo-staffing.html" onclick="closeDrawer()">Promo Staffing</a>
     <a href="../embedded.html" onclick="closeDrawer()">Embedded Crew</a>
     <a href="../compliance.html" onclick="closeDrawer()">Compliance</a>
-    <a href="/blog/" onclick="closeDrawer()">Blog</a>
+    <a href="../index.html" onclick="closeDrawer()">Blog</a>
     <a href="../faq.html" onclick="closeDrawer()">FAQ</a>
     <a href="../contact.html" onclick="closeDrawer()">Contact</a>
-    <a href="/contact.html" class="drawer-cta">Request &nbsp;→</a>
+    <a href="#" class="drawer-cta" onclick="openCrewModal(); closeDrawer();">Request &nbsp;→</a>
   </div>
 <nav class="nav">
     <a href="../index.html"><img class="nav-logo" src="../images/opalopslogo.png" alt="OpalOps"></a>
@@ -416,12 +406,12 @@
       <a href="../promo-staffing.html">Promo Staffing</a>
       <a href="../embedded.html">Embedded Crew</a>
       <a href="../compliance.html">Compliance</a>
-      <a href="/blog/" class="active">Blog</a>
+      <a href="../index.html">Blog</a>
     </div>
     <div class="nav-right">
       <a href="../faq.html">FAQ</a>
       <a href="../contact.html">Contact</a>
-      <a href="/contact.html" class="nav-cta">Request a Crew</a>
+      <a href="#" class="nav-cta" onclick="openCrewModal()">Request a Crew</a>
     </div>
     <button class="nav-hamburger" onclick="openDrawer()" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -434,7 +424,15 @@
   <p class="standfirst">Practical guides to hiring, briefing and running event labor in the New York metro. Written by people who have worked the load-ins.</p>
 </section>
 <div class="posts">
-  <a class="post-card" href="event-staffing-nyc-how-to-hire-a-crew.html">
+  <a class="post-card" href="event-staff-cost-nyc-how-event-labor-is-priced">
+    <img src="https://cdn.marblism.com/0hnp3_AHusH.webp" alt="Crew lead with a clipboard briefing staff at a New York City loading dock at dusk">
+    <div class="pc-in">
+      <span class="pc-tag">Budgeting</span>
+      <h2>What Event Staff Cost in NYC: How Event Labor Is Priced and What All-In Really Means</h2>
+      <p>How event staff cost is actually priced in NYC: what moves the rate, what an all-in quote includes, and the five line items that surprise buyers most.</p>
+    </div>
+  </a>
+  <a class="post-card" href="event-staffing-nyc-how-to-hire-a-crew">
     <img src="https://cdn.marblism.com/2Qinyz02-oE.webp" alt="Event crew unloading production cases at a New York City venue">
     <div class="pc-in">
       <span class="pc-tag">Event Staffing NYC</span>
@@ -464,6 +462,9 @@
   <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; justify-content: center;">
     <a href="https://tally.so/r/EkoXJo" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 24px; background: var(--gold-light); color: #0a0a0a; font-size: 14px; font-weight: 700; border-radius: 20px; text-decoration: none; letter-spacing: .3px;">
       🤝 Refer a Client, Earn a Commission &nbsp;→
+    </a>
+    <a href="#" id="referral-terms-link" style="font-size: 13px; color: rgba(10,10,10,0.7); text-decoration: underline; font-weight: 500;">
+      Referral Program Terms
     </a>
   </div>
 
